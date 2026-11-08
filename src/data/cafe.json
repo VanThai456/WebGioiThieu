@@ -1,0 +1,224 @@
+{
+  "id": "cafe",
+  "name": "The Artisan Brew",
+  "category": "Quán Cafe & Trà Đặc Sản",
+  "tagline": "Hương Vị Mộc Mạc - Không Gian Tĩnh Lặng",
+  "theme": {
+    "primaryColor": "#8B4513",
+    "primaryHover": "#6F370F",
+    "primaryLight": "rgba(139, 69, 19, 0.12)",
+    "accentColor": "#D4A373",
+    "secondaryColor": "#FAEDCD",
+    "bgColor": "#FAF7F2",
+    "surfaceColor": "#FFFFFF",
+    "textColor": "#2B1D14",
+    "textMutedColor": "#7A6A5E",
+    "fontHeading": "'Playfair Display', serif",
+    "fontBody": "'Plus Jakarta Sans', sans-serif"
+  },
+  "navbar": {
+    "brandLogoText": "The Artisan",
+    "brandBadge": "CAFE & TEA",
+    "links": [
+      { "label": "Giới Thiệu", "href": "#hero" },
+      { "label": "Menu Nổi Bật", "href": "#services" },
+      { "label": "Không Gian", "href": "#gallery" },
+      { "label": "Thành Tựu", "href": "#stats" },
+      { "label": "Đặt Bàn", "href": "#contact" }
+    ],
+    "actionButton": {
+      "label": "Đặt Bàn Ngay",
+      "href": "#contact"
+    }
+  },
+  "hero": {
+    "title": "Kiến Tạo Không Gian Thưởng Thức - Đậm Đà Từng Giọt Hương Vị",
+    "description": "Chúng tôi chọn lọc từng hạt cà phê Arabica Cầu Đất nguyên bản, rang mộc chuẩn nhiệt và pha chế bằng cả niềm đam mê để gửi trao bạn những phút giây thư thái nhất.",
+    "backgroundImage": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=2000&q=85",
+    "primaryCta": {
+      "label": "Khám Phá Menu Đặc Sắc",
+      "href": "#services"
+    },
+    "secondaryCta": {
+      "label": "Xem Không Gian Quán",
+      "href": "#gallery"
+    },
+    "highlights": [
+      "100% Cà phê Organic mộc",
+      "Pha chế thủ công tinh tế",
+      "Không gian làm việc & thư giãn"
+    ]
+  },
+  "services": {
+    "badge": "MENU SIGNATURE",
+    "title": "Hương Vị Độc Bản Đánh Thức Vị Giác",
+    "description": "Mỗi thức uống là một tác phẩm được sáng tạo bởi các Barista tâm huyết, kết hợp hoàn hảo giữa kỹ thuật pha chế và nguyên liệu nông sản Việt thượng hạng.",
+    "columns": 3,
+    "items": [
+      {
+        "id": "c1",
+        "title": "Cold Brew Cam Vàng Hạnh Nhân",
+        "category": "Cà Phê Ủ Lạnh",
+        "description": "Cà phê Arabica ngâm ủ lạnh 24 giờ hòa quyện cùng nước ép cam vàng mọng nước và sữa hạnh nhân nguyên chất thơm bùi.",
+        "price": "65.000 đ",
+        "badge": "Bán Chạy Nhất",
+        "image": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "c2",
+        "title": "Cà Phê Muối Biển Thủ Công",
+        "category": "Signature Coffee",
+        "description": "Chiết xuất phin truyền thống phối trộn cùng lớp kem muối biển đánh bông mềm mịn, vị đậm béo cân bằng tuyệt đối.",
+        "price": "55.000 đ",
+        "badge": "Yêu Thích",
+        "image": "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "c3",
+        "title": "Matcha Uji Latte Kem Yến Mạch",
+        "category": "Trà Nhật Bản",
+        "description": "Bột trà xanh hữu cơ nhập khẩu trực tiếp từ vùng Uji, Kyoto kết hợp cùng sữa yến mạch thanh nhẹ tốt cho sức khỏe.",
+        "price": "62.000 đ",
+        "badge": "Mới Ra Mắt",
+        "image": "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "c4",
+        "title": "Trà Đào Cam Sả Lá Bạc Hà",
+        "category": "Trà Trái Cây",
+        "description": "Nền trà đen thanh ngọt, miếng đào ngâm giòn ngọt mọng nước cùng hương thơm the mát sảng khoái của sả và bạc hà.",
+        "price": "58.000 đ",
+        "badge": "Thanh Mát",
+        "image": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "c5",
+        "title": "Bánh Sừng Bò Croissant Bơ Pháp",
+        "category": "Bánh Ngọt Mỗi Ngày",
+        "description": "Bánh cán nhiều lớp giòn xốp bên ngoài, mềm ngậy bên trong, sử dụng 100% bơ lạt thượng hạng vùng Normandy Pháp.",
+        "price": "45.000 đ",
+        "badge": "Nướng Mới",
+        "image": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "c6",
+        "title": "Set Trà Chiều Thảo Mộc Quý Tộc",
+        "category": "Trà Chiều & Bánh",
+        "description": "Bình trà hoa cúc mật ong hảo hạng kèm khay bánh macaron và bánh tart hoa quả tươi, thích hợp cho nhóm bạn chuyện trò.",
+        "price": "185.000 đ",
+        "badge": "Combo VIP",
+        "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80"
+      }
+    ]
+  },
+  "gallery": {
+    "badge": "KHÔNG GIAN & KHOẢNH KHẮC",
+    "title": "Góc Bình Yên Giữa Lòng Đô Thị Sầm Uất",
+    "description": "Ánh sáng tự nhiên ngập tràn, âm nhạc Jazz mộc mạc và hương thơm cà phê nồng nàn tạo nên một không gian truyền cảm hứng bất tận.",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1200&q=80",
+        "title": "Nghệ thuật pha chế Barista",
+        "caption": "Tỉ mỉ trong từng đường vân Latte Art"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80",
+        "title": "Góc bàn gỗ mộc bên khung cửa",
+        "caption": "Không gian lý tưởng để đọc sách và làm việc"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80",
+        "title": "Hạt cà phê chín mọng tuyển chọn",
+        "caption": "100% tuyển chọn hạt chín tay từ nông trại Cầu Đất"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=1200&q=80",
+        "title": "Ly cà phê ấm sớm mai",
+        "caption": "Khởi đầu ngày mới tràn đầy năng lượng tươi trẻ"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1509785307050-d4066910ec1e?auto=format&fit=crop&w=1200&q=80",
+        "title": "Khu vườn xanh mát ngoài trời",
+        "caption": "Thư thái hít thở không khí tự nhiên trong lành"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1200&q=80",
+        "title": "Kệ sách & bộ sưu tập tách cổ",
+        "caption": "Nơi lưu giữ những câu chuyện và kỷ niệm êm đềm"
+      }
+    ]
+  },
+  "stats": {
+    "badge": "NHỮNG CON SỐ BIẾT NÓI",
+    "title": "Tâm Huyết Được Khách Hàng Ghi Nhận",
+    "items": [
+      {
+        "value": 8,
+        "suffix": "+",
+        "label": "Năm Khởi Tạo Đam Mê",
+        "sub": "Đồng hành cùng cộng đồng yêu cafe"
+      },
+      {
+        "value": 1500,
+        "suffix": "+",
+        "label": "Ly Cà Phê Mỗi Ngày",
+        "sub": "Được phục vụ với nụ cười thân thiện"
+      },
+      {
+        "value": 25,
+        "suffix": "+",
+        "label": "Công Thức Độc Quyền",
+        "sub": "Sáng tạo bởi Barista đoạt giải quốc gia"
+      },
+      {
+        "value": 99,
+        "suffix": "%",
+        "label": "Khách Hàng Hài Lòng",
+        "sub": "Dựa trên hơn 4.800 lượt đánh giá"
+      }
+    ]
+  },
+  "contact": {
+    "badge": "ĐẶT BÀN & LIÊN HỆ",
+    "title": "Ghé Thăm Chúng Tôi Hoặc Giữ Bàn Trước",
+    "description": "Để đảm bảo có vị trí ngồi đẹp nhất cho buổi họp mặt hoặc làm việc nhóm, quý khách vui lòng để lại thông tin đặt bàn.",
+    "info": {
+      "address": "128 Nguyễn Đình Chiểu, Phường Võ Thị Sáu, Quận 3, TP. Hồ Chí Minh",
+      "phone": "0837.017.516",
+      "email": "contact@theartisanbrew.vn",
+      "hours": "Thứ 2 - Chủ Nhật: 07:00 - 22:30"
+    },
+    "form": {
+      "namePlaceholder": "Họ và tên của bạn",
+      "phonePlaceholder": "Số điện thoại liên hệ",
+      "selectPlaceholder": "Chọn dịch vụ / Món bạn quan tâm",
+      "selectOptions": [
+        "Đặt bàn cá nhân (1 - 2 người)",
+        "Đặt bàn nhóm làm việc (4 - 8 người)",
+        "Đặt sự kiện workshop / tiệc nhỏ",
+        "Tư vấn nhượng quyền thương hiệu",
+        "Đặt cà phê hạt & máy pha tại nhà"
+      ],
+      "messagePlaceholder": "Thời gian ghé quán hoặc yêu cầu đặc biệt của bạn...",
+      "submitButton": "Gửi Yêu Cầu Đặt Bàn",
+      "successMessage": "Đặt bàn thành công! Đội ngũ The Artisan Brew sẽ gọi điện xác nhận trong vòng 5 phút."
+    }
+  },
+  "floatingCta": {
+    "text": "Bạn thích web Quán Cafe này? Nhận báo giá ngay qua Zalo",
+    "buttonLabel": "Tư Vấn Zalo",
+    "url": "https://zalo.me/0837017516",
+    "zaloPhone": "0837017516"
+  },
+  "footer": {
+    "about": "The Artisan Brew là thương hiệu cà phê đặc sản thủ công, tôn vinh giá trị nông sản bản địa và mang lại trải nghiệm không gian sống chậm đích thực.",
+    "quickLinks": [
+      { "label": "Về chúng tôi", "href": "#hero" },
+      { "label": "Thực đơn đặc sản", "href": "#services" },
+      { "label": "Hình ảnh không gian", "href": "#gallery" },
+      { "label": "Chính sách nhượng quyền", "href": "#contact" }
+    ],
+    "copyright": "© 2026 The Artisan Brew. Tất cả các quyền được bảo lưu. Bản demo White-label Landing Page."
+  }
+}
+

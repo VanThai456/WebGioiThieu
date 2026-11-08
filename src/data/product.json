@@ -1,0 +1,224 @@
+{
+  "id": "product",
+  "name": "AuraSound Apex",
+  "category": "Tai Nghe Hi-Res Không Dây",
+  "tagline": "Âm Thanh Thuần Khiết - Chuẩn Mực Công Nghệ Tương Lai",
+  "theme": {
+    "primaryColor": "#4F46E5",
+    "primaryHover": "#3730A3",
+    "primaryLight": "rgba(79, 70, 229, 0.08)",
+    "accentColor": "#0284C7",
+    "secondaryColor": "#EEF2FF",
+    "bgColor": "#F8FAFC",
+    "surfaceColor": "#FFFFFF",
+    "textColor": "#0F172A",
+    "textMutedColor": "#64748B",
+    "fontHeading": "'Plus Jakarta Sans', sans-serif",
+    "fontBody": "'Inter', sans-serif"
+  },
+  "navbar": {
+    "brandLogoText": "AuraSound",
+    "brandBadge": "APEX PRO",
+    "links": [
+      { "label": "Tổng Quan", "href": "#hero" },
+      { "label": "Phiên Bản & Giá", "href": "#services" },
+      { "label": "Hình Ảnh Chi Tiết", "href": "#gallery" },
+      { "label": "Thông Số Vượt Trội", "href": "#stats" },
+      { "label": "Đặt Mua Ngay", "href": "#contact" }
+    ],
+    "actionButton": {
+      "label": "Đặt Hàng Ngay",
+      "href": "#contact"
+    }
+  },
+  "hero": {
+    "title": "Chất Âm Đỉnh Cao - Đắm Chìm Trong Từng Giai Điệu Chân Thực",
+    "description": "Trang bị màng loa Beryllium 40mm cao cấp kết hợp chip giải mã âm thanh 32-bit và công nghệ chống ồn chủ động thích ứng Hybrid ANC -45dB thế hệ mới.",
+    "backgroundImage": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=2000&q=85",
+    "primaryCta": {
+      "label": "Mua Ngay - Ưu Đãi 35%",
+      "href": "#services"
+    },
+    "secondaryCta": {
+      "label": "Trải Nghiệm Âm Thanh Vòm",
+      "href": "#gallery"
+    },
+    "highlights": [
+      "Chống ồn Hybrid ANC -45dB",
+      "Pin 65 giờ liên tục (Sạc 10p nghe 5h)",
+      "Màng loa Beryllium 40mm độ phân giải cao"
+    ]
+  },
+  "services": {
+    "badge": "BỘ SƯU TẬP & PHỤ KIỆN",
+    "title": "Chọn Phiên Bản Phong Cách Dành Riêng Cho Bạn",
+    "description": "Được chế tác từ nhôm nguyên khối hàng không và da protein cao cấp, mang lại cảm giác đeo êm ái suốt cả ngày làm việc và giải trí.",
+    "columns": 3,
+    "items": [
+      {
+        "id": "p1",
+        "title": "AuraSound Apex - Midnight Black",
+        "category": "Phiên Bản Tiêu Chuẩn",
+        "description": "Gam màu đen nhám huyền bí chống bám vân tay, tích hợp codec LDAC truyền tải âm thanh không nén chất lượng phòng thu.",
+        "price": "3.890.000 đ",
+        "badge": "Bán Chạy Nhất",
+        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "p2",
+        "title": "AuraSound Apex - Moonlight Silver",
+        "category": "Phiên Bản Cao Cấp",
+        "description": "Vỏ kim loại phay xước màu bạc tinh xảo, đệm tai mút hoạt tính bọc da cừu siêu nhẹ chỉ 240g tạo cảm giác đeo như không.",
+        "price": "4.150.000 đ",
+        "badge": "Sang Trọng",
+        "image": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "p3",
+        "title": "AuraSound Apex - Cyber Neon Edition",
+        "category": "Phiên Bản Giới Hạn",
+        "description": "Đèn LED viền RGB AuraSync đồng bộ theo nhịp nhạc, microphone chống ồn kép lọc gió khử ồn đàm thoại cực nét.",
+        "price": "4.590.000 đ",
+        "badge": "Limited Edition",
+        "image": "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "p4",
+        "title": "AuraStand - Giá Đỡ Sạc Nhanh Qi 15W",
+        "category": "Hệ Sinh Thái Phụ Kiện",
+        "description": "Đế hợp kim kẽm đúc nguyên khối kiêm sạc nhanh không dây chuẩn Qi cho điện thoại và tai nghe, đèn led ambient thông minh.",
+        "price": "890.000 đ",
+        "badge": "Tiện Ích",
+        "image": "https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "p5",
+        "title": "Cáp Audio Mạ Bạc Hi-End 4.4mm",
+        "category": "Phụ Kiện Chuyên Nghiệp",
+        "description": "Lõi đồng OCC mạ bạc độ tinh khiết cao 6N, jack cắm 4.4mm Balanced mạ vàng 24K tối ưu chi tiết âm trường tối đa.",
+        "price": "650.000 đ",
+        "badge": "Audiophile",
+        "image": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "p6",
+        "title": "Hộp Đựng Chống Nước Chuẩn Quân Đội",
+        "category": "Bảo Vệ Du Lịch",
+        "description": "Vỏ nhựa Polycarbonate chống va đập 360 độ, gioăng cao su chống nước IPX7 kèm ngăn chứa phụ kiện cáp sạc gọn gàng.",
+        "price": "450.000 đ",
+        "badge": "Bền Bỉ",
+        "image": "https://images.unsplash.com/photo-1545127398-14699f92334b?auto=format&fit=crop&w=800&q=80"
+      }
+    ]
+  },
+  "gallery": {
+    "badge": "THIẾT KẾ ĐỘT PHÁ",
+    "title": "Từng Đường Nét Được Chăm Chút Tỉ Mỉ",
+    "description": "Sự kết hợp hoàn hảo giữa kỹ nghệ chế tác cơ khí chính xác và công nghệ điện tử hàng đầu thế giới.",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=80",
+        "title": "Góc nhìn Studio mặt chính diện",
+        "caption": "Màng loa hợp kim tinh tế với khớp xoay công thái học"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=1200&q=80",
+        "title": "Chi tiết đệm da cừu êm ái",
+        "caption": "Bọt biển nhớ hình dáng thoáng khí không gây nóng tai"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=1200&q=80",
+        "title": "Khung nhôm Anodized cao cấp",
+        "caption": "Chống xước tuyệt đối với trọng lượng siêu nhẹ"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=1200&q=80",
+        "title": "Trải nghiệm âm nhạc di động",
+        "caption": "Kết nối Bluetooth 5.4 ổn định trong phạm vi 25 mét"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1572536147248-ac59a8abfa4b?auto=format&fit=crop&w=1200&q=80",
+        "title": "Bàn làm việc phong cách tối giản",
+        "caption": "Món đồ công nghệ nâng tầm không gian làm việc của bạn"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?auto=format&fit=crop&w=1200&q=80",
+        "title": "Cụm phím điều khiển cảm ứng",
+        "caption": "Chạm vuốt thông minh điều chỉnh âm lượng và nhận cuộc gọi"
+      }
+    ]
+  },
+  "stats": {
+    "badge": "THÔNG SỐ VƯỢT TRỘI",
+    "title": "Sức Mạnh Công Nghệ Được Kiểm Chứng",
+    "items": [
+      {
+        "value": 65,
+        "suffix": "h",
+        "label": "Thời Lượng Pin Liên Tục",
+        "sub": "Sạc nhanh 10 phút dùng 5 giờ"
+      },
+      {
+        "value": 45,
+        "suffix": "dB",
+        "label": "Khử Ồn Chủ Động ANC",
+        "sub": "Triệt tiêu 99% tạp âm môi trường"
+      },
+      {
+        "value": 50000,
+        "suffix": "+",
+        "label": "Sản Phẩm Đã Bán Ra",
+        "sub": "Khách hàng tại hơn 18 quốc gia"
+      },
+      {
+        "value": 99.4,
+        "suffix": "%",
+        "label": "Khách Hàng Đánh Giá 5 Sao",
+        "sub": "Bảo hành 1 đổi 1 trong 24 tháng"
+      }
+    ]
+  },
+  "contact": {
+    "badge": "ĐẶT HÀNG TRỰC TUYẾN",
+    "title": "Nhận Ưu Đãi Độc Quyền Ra Mắt Ngay Hôm Nay",
+    "description": "Điền thông tin đặt mua ngay để nhận voucher giảm 35% cùng gói quà tặng phụ kiện trị giá 1.200.000 đ.",
+    "info": {
+      "address": "Tầng 5, Tòa nhà Innovation Center, 88 Láng Hạ, Đống Đa, Hà Nội",
+      "phone": "0837.017.516",
+      "email": "support@aurasound.vn",
+      "hours": "Hỗ trợ kỹ thuật: 24/7 toàn quốc"
+    },
+    "form": {
+      "namePlaceholder": "Họ và tên người nhận",
+      "phonePlaceholder": "Số điện thoại nhận hàng",
+      "selectPlaceholder": "Chọn phiên bản sản phẩm",
+      "selectOptions": [
+        "AuraSound Apex - Midnight Black (3.890.000 đ)",
+        "AuraSound Apex - Moonlight Silver (4.150.000 đ)",
+        "AuraSound Apex - Cyber Neon Limited (4.590.000 đ)",
+        "Combo Apex + Dock Sạc Không Dây AuraStand (Tiết kiệm 500k)",
+        "Đăng ký đại lý phân phối ủy quyền"
+      ],
+      "messagePlaceholder": "Địa chỉ giao hàng hoặc ghi chú thêm (ví dụ: giao giờ hành chính)...",
+      "submitButton": "Xác Nhận Đặt Hàng Ngay",
+      "successMessage": "Đặt hàng thành công! Nhân viên chăm sóc khách hàng AuraSound sẽ gọi xác nhận đơn và gửi mã vận đơn trong 15 phút."
+    }
+  },
+  "floatingCta": {
+    "text": "Bạn thích web giới thiệu sản phẩm tương tự? Nhận báo giá ngay qua Zalo",
+    "buttonLabel": "Nhận Báo Giá Zalo",
+    "url": "https://zalo.me/0837017516",
+    "zaloPhone": "0837017516"
+  },
+  "footer": {
+    "about": "AuraSound là thương hiệu âm thanh công nghệ cao tiên phong nghiên cứu công nghệ màng loa thế hệ mới, mang lại trải nghiệm âm nhạc chân thực chuẩn phòng thu.",
+    "quickLinks": [
+      { "label": "Giới thiệu AuraSound", "href": "#hero" },
+      { "label": "Thông số sản phẩm", "href": "#services" },
+      { "label": "Chính sách bảo hành", "href": "#stats" },
+      { "label": "Hệ thống đại lý", "href": "#contact" }
+    ],
+    "copyright": "© 2026 AuraSound Vietnam. Tất cả các quyền được bảo lưu. Bản demo White-label Landing Page."
+  }
+}
+

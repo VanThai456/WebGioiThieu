@@ -1,0 +1,224 @@
+{
+  "id": "corporate",
+  "name": "Nexus Global Consulting",
+  "category": "Tư Vấn Chiến Lược & Chuyển Đổi Số",
+  "tagline": "Định Hình Tương Lai - Bứt Phá Doanh Thu Bền Vững",
+  "theme": {
+    "primaryColor": "#0F3B82",
+    "primaryHover": "#0A295C",
+    "primaryLight": "rgba(15, 59, 130, 0.1)",
+    "accentColor": "#D97706",
+    "secondaryColor": "#E0E7FF",
+    "bgColor": "#F8FAFC",
+    "surfaceColor": "#FFFFFF",
+    "textColor": "#0F172A",
+    "textMutedColor": "#64748B",
+    "fontHeading": "'Montserrat', sans-serif",
+    "fontBody": "'Plus Jakarta Sans', sans-serif"
+  },
+  "navbar": {
+    "brandLogoText": "Nexus Global",
+    "brandBadge": "ENTERPRISE",
+    "links": [
+      { "label": "Về Nexus", "href": "#hero" },
+      { "label": "Dịch Vụ Chiến Lược", "href": "#services" },
+      { "label": "Năng Lực & Dự Án", "href": "#gallery" },
+      { "label": "Số Liệu Thực Tế", "href": "#stats" },
+      { "label": "Liên Hệ Hợp Tác", "href": "#contact" }
+    ],
+    "actionButton": {
+      "label": "Đặt Lịch Cố Vấn",
+      "href": "#contact"
+    }
+  },
+  "hero": {
+    "title": "Kiến Tạo Không Gian Số - Nâng Tầm Vị Thế Doanh Nghiệp Của Bạn",
+    "description": "Chúng tôi đồng hành cùng các nhà lãnh đạo giải quyết các bài toán tái cấu trúc then chốt, chuyển đổi số toàn diện và thúc đẩy tăng trưởng doanh thu vượt bậc.",
+    "backgroundImage": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=85",
+    "primaryCta": {
+      "label": "Nhận Khảo Sát Doanh Nghiệp",
+      "href": "#services"
+    },
+    "secondaryCta": {
+      "label": "Khám Phá Dự Án Tiêu Biểu",
+      "href": "#gallery"
+    },
+    "highlights": [
+      "12+ Năm kinh nghiệm cố vấn cấp cao",
+      "Phương pháp luận chuẩn quốc tế McKinsey & BCG",
+      "Cam kết bảo mật và ROI đo lường được"
+    ]
+  },
+  "services": {
+    "badge": "LĨNH VỰC TƯ VẤN CỐT LÕI",
+    "title": "Giải Pháp Toàn Diện Cho Doanh Nghiệp Hiện Đại",
+    "description": "Các gói dịch vụ chuyên sâu được may đo riêng cho từng mô hình doanh nghiệp từ vừa và nhỏ (SME) đến tập đoàn đa ngành.",
+    "columns": 3,
+    "items": [
+      {
+        "id": "b1",
+        "title": "Tư Vấn Chiến Lược Tăng Trưởng Toàn Diện",
+        "category": "Chiến Lược Kinh Doanh",
+        "description": "Phân tích ma trận cạnh tranh thị trường, hoạch định lộ trình mở rộng thị phần và khai phá nguồn doanh thu mới đột phá.",
+        "price": "Từ 150.000.000 đ",
+        "badge": "Chuyên Sâu",
+        "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "b2",
+        "title": "Chuyển Đổi Số & Tự Động Hóa Quy Trình",
+        "category": "Công Nghệ & Dữ Liệu",
+        "description": "Tích hợp hệ sinh thái ERP/CRM thông minh, tự động hóa luồng vận hành giảm thiểu 40% chi phí nhân sự và thời gian xử lý.",
+        "price": "Từ 180.000.000 đ",
+        "badge": "Xu Hướng 2026",
+        "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "b3",
+        "title": "Tái Cấu Trúc Tài Chính & Quản Trị Rủi Ro",
+        "category": "Tài Chính Doanh Nghiệp",
+        "description": "Tối ưu hóa dòng tiền hoạt động, xây dựng báo cáo quản trị minh bạch và định giá doanh nghiệp sẵn sàng cho vòng gọi vốn lớn.",
+        "price": "Từ 120.000.000 đ",
+        "badge": "Tin Cậy",
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "b4",
+        "title": "Quản Trị Nhân Sự & Văn Hóa Hiệu Suất Cao",
+        "category": "Tổ Chức & Con Người",
+        "description": "Thiết lập khung năng lực chuẩn hóa, cơ chế đãi ngộ OKRs/KPIs tạo động lực mạnh mẽ giữ chân nhân tài xuất sắc.",
+        "price": "Từ 95.000.000 đ",
+        "badge": "Thực Chiến",
+        "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "b5",
+        "title": "Định Vị Thương Hiệu & Marketing Đa Kênh",
+        "category": "Thương Hiệu & Truyền Thông",
+        "description": "Xây dựng nhận diện thương hiệu đẳng cấp quốc tế, triển khai chiến dịch thu hút khách hàng tiềm năng B2B chất lượng cao.",
+        "price": "Từ 110.000.000 đ",
+        "badge": "Sáng Tạo",
+        "image": "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "b6",
+        "title": "Tư Vấn Pháp Lý Doanh Nghiệp & M&A Sáp Nhập",
+        "category": "Pháp Lý & Hợp Tác",
+        "description": "Soát xét thẩm định rủi ro pháp lý (Due Diligence), hỗ trợ đàm phán thương vụ sáp nhập và bảo vệ tài sản sở hữu trí tuệ.",
+        "price": "Theo Quy Mô Dự Án",
+        "badge": "Cấp Cao",
+        "image": "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80"
+      }
+    ]
+  },
+  "gallery": {
+    "badge": "NĂNG LỰC ĐỘI NGŨ & DỰ ÁN",
+    "title": "Dấu Ấn Thành Công Qua Những Thương Vụ Lớn",
+    "description": "Mỗi dự án là một minh chứng sống động cho tinh thần chuyên nghiệp, chuẩn mực và cam kết kết quả vượt trội của Nexus Global.",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
+        "title": "Văn phòng hội nghị điều hành cấp cao",
+        "caption": "Không gian hội thảo chiến lược định hướng tương lai"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80",
+        "title": "Workshop cố vấn cùng ban giám đốc",
+        "caption": "Thảo luận chuyên sâu và giải mã các nút thắt tăng trưởng"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80",
+        "title": "Trung tâm phân tích dữ liệu thị trường",
+        "caption": "Đưa ra quyết định dựa trên số liệu thực tế chính xác"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80",
+        "title": "Ký kết thỏa thuận hợp tác liên minh",
+        "caption": "Kết nối doanh nghiệp với các quỹ đầu tư mạo hiểm quốc tế"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+        "title": "Trụ sở chính tại trung tâm tài chính",
+        "caption": "Biểu tượng của sự vững chãi và tầm nhìn vươn tầm thế giới"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80",
+        "title": "Đào tạo lãnh đạo kế cận kế tiếp",
+        "caption": "Chuyển giao năng lực quản trị để doanh nghiệp tự vận hành"
+      }
+    ]
+  },
+  "stats": {
+    "badge": "HIỆU QUẢ ĐƯỢC CHỨNG MINH",
+    "title": "Những Con Số Đo Lường Thành Tựu Thực Tế",
+    "items": [
+      {
+        "value": 12,
+        "suffix": "+",
+        "label": "Năm Cố Vấn Doanh Nghiệp",
+        "sub": "Đội ngũ chuyên gia từ Big 4 & MBB"
+      },
+      {
+        "value": 500,
+        "suffix": "+",
+        "label": "Dự Án Đã Hoàn Thành",
+        "sub": "Tỷ lệ dự án đạt mục tiêu tăng trưởng 98%"
+      },
+      {
+        "value": 120,
+        "suffix": "+",
+        "label": "Doanh Nghiệp VNR500 Tin Chọn",
+        "sub": "Hợp tác chiến lược dài hạn trên 5 năm"
+      },
+      {
+        "value": 99.2,
+        "suffix": "%",
+        "label": "Tỷ Lệ Khách Hàng Hài Lòng",
+        "sub": "Khảo sát độc lập bởi cơ quan kiểm toán"
+      }
+    ]
+  },
+  "contact": {
+    "badge": "ĐẶT LỊCH LÀM VIỆC",
+    "title": "Khởi Đầu Bước Tiến Mới Cho Doanh Nghiệp Của Bạn",
+    "description": "Để lại thông tin để đặt lịch phiên họp cố vấn chiến lược trực tiếp (1-on-1) cùng Chuyên gia trưởng của Nexus Global.",
+    "info": {
+      "address": "Tầng 42, Landmark 81 Tower, 720A Điện Biên Phủ, Phường 22, Bình Thạnh, TP. Hồ Chí Minh",
+      "phone": "0837.017.516",
+      "email": "consulting@nexusglobal.vn",
+      "hours": "Thứ 2 - Thứ 6: 08:30 - 18:00 (Ngoại trừ ngày lễ)"
+    },
+    "form": {
+      "namePlaceholder": "Họ và tên của Quý khách",
+      "phonePlaceholder": "Số điện thoại liên hệ trực tiếp",
+      "selectPlaceholder": "Lĩnh vực doanh nghiệp cần tư vấn",
+      "selectOptions": [
+        "Tư vấn chiến lược tăng trưởng doanh thu",
+        "Chuyển đổi số & Tự động hóa quy trình ERP/CRM",
+        "Tái cấu trúc tài chính & Chuẩn bị gọi vốn",
+        "Xây dựng hệ thống nhân sự & Khung năng lực",
+        "Tư vấn M&A và Pháp lý doanh nghiệp cấp cao"
+      ],
+      "messagePlaceholder": "Mô tả ngắn gọn về quy mô doanh nghiệp và thách thức hiện tại của Quý công ty...",
+      "submitButton": "Đăng Ký Buổi Cố Vấn Chiến Lược",
+      "successMessage": "Gửi yêu cầu thành công! Chuyên gia cấp cao của Nexus Global sẽ liên hệ lại qua điện thoại trong vòng 15 phút."
+    }
+  },
+  "floatingCta": {
+    "text": "Bạn thích web giới thiệu doanh nghiệp tương tự? Nhận báo giá ngay qua Zalo",
+    "buttonLabel": "Nhận Báo Giá Zalo",
+    "url": "https://zalo.me/0837017516",
+    "zaloPhone": "0837017516"
+  },
+  "footer": {
+    "about": "Nexus Global Consulting là tổ hợp tư vấn chiến lược độc lập hàng đầu tại Đông Nam Á, cam kết mang lại giá trị bền vững và lợi thế cạnh tranh dài hạn cho khách hàng.",
+    "quickLinks": [
+      { "label": "Về Nexus Global", "href": "#hero" },
+      { "label": "Dịch vụ tư vấn", "href": "#services" },
+      { "label": "Dự án tiêu biểu", "href": "#gallery" },
+      { "label": "Chính sách bảo mật", "href": "#contact" }
+    ],
+    "copyright": "© 2026 Nexus Global Consulting Ltd. Tất cả các quyền được bảo lưu. Bản demo White-label Landing Page."
+  }
+}
+
