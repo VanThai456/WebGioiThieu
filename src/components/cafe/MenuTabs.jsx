@@ -18,30 +18,18 @@ export default function MenuTabs({ data, onSelectService }) {
     : items.filter((item) => item.category?.toLowerCase().includes(activeTab.toLowerCase()) || activeTab.toLowerCase().includes(item.category?.toLowerCase()));
 
   return (
-    <section id="services" className="py-24 relative transition-colors duration-300">
+    <section id="services" className="py-12 sm:py-20 md:py-24 relative transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          {badge && (
-            <div
-              className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 shadow-sm"
-              style={{
-                backgroundColor: 'var(--color-primary-light)',
-                color: 'var(--color-primary)',
-              }}
-            >
-              <Coffee className="w-3.5 h-3.5" />
-              <span>{badge}</span>
-            </div>
-          )}
+        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-12">
           <h2
-            className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-4"
+            className="font-heading text-xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-2 sm:mb-4"
             style={{ color: 'var(--color-text)' }}
           >
             {title}
           </h2>
           <p
-            className="text-base sm:text-lg leading-relaxed"
+            className="text-xs sm:text-base md:text-lg leading-relaxed"
             style={{ color: 'var(--color-text-muted)' }}
           >
             {description}
@@ -50,7 +38,7 @@ export default function MenuTabs({ data, onSelectService }) {
 
         {/* Category Tabs */}
         {categories && categories.length > 0 && (
-          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-14">
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8 sm:mb-14">
             {categories.map((cat, idx) => {
               const isActive = activeTab === cat;
               return (
@@ -58,7 +46,7 @@ export default function MenuTabs({ data, onSelectService }) {
                   key={idx}
                   type="button"
                   onClick={() => setActiveTab(cat)}
-                  className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all duration-300 shadow-sm ${
+                  className={`px-3.5 py-2 sm:px-5 sm:py-2.5 rounded-full text-[11px] sm:text-sm font-bold transition-all duration-300 shadow-sm ${
                     isActive
                       ? 'text-white shadow-md scale-105'
                       : 'hover:bg-black/5 dark:hover:bg-white/10 opacity-75 hover:opacity-100'
@@ -77,7 +65,7 @@ export default function MenuTabs({ data, onSelectService }) {
         )}
 
         {/* Menu Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 lg:gap-8">
           {filteredItems.map((item) => (
             <div
               key={item.id}
@@ -88,7 +76,7 @@ export default function MenuTabs({ data, onSelectService }) {
               }}
             >
               {/* Image Container */}
-              <div className="relative h-56 w-full overflow-hidden bg-amber-50">
+              <div className="relative h-28 sm:h-48 md:h-56 w-full overflow-hidden bg-amber-50">
                 <img
                   src={item.image}
                   alt={item.title}
@@ -100,7 +88,7 @@ export default function MenuTabs({ data, onSelectService }) {
                 {/* Badge Tag */}
                 {item.badge && (
                   <div
-                    className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold text-white shadow-md backdrop-blur-md"
+                    className="absolute top-2 left-2 sm:top-4 sm:left-4 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-[9px] sm:text-xs font-bold text-white shadow-md backdrop-blur-md"
                     style={{ backgroundColor: 'var(--color-primary)' }}
                   >
                     {item.badge}
@@ -109,7 +97,7 @@ export default function MenuTabs({ data, onSelectService }) {
 
                 {/* Category tag */}
                 {item.category && (
-                  <div className="absolute bottom-3 left-4 flex items-center gap-1 text-xs font-semibold text-white/95 drop-shadow">
+                  <div className="hidden sm:flex absolute bottom-3 left-4 items-center gap-1 text-xs font-semibold text-white/95 drop-shadow">
                     <Tag className="w-3.5 h-3.5 text-amber-300" />
                     <span>{item.category}</span>
                   </div>
@@ -117,11 +105,11 @@ export default function MenuTabs({ data, onSelectService }) {
               </div>
 
               {/* Content Body */}
-              <div className="p-6 flex-1 flex flex-col justify-between">
+              <div className="p-3 sm:p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <div className="flex items-start justify-between gap-2 mb-2">
+                  <div className="flex items-start justify-between gap-2 mb-1 sm:mb-2">
                     <h3
-                      className="font-heading text-xl font-bold transition-colors group-hover:text-amber-700"
+                      className="font-heading text-sm sm:text-xl font-bold transition-colors group-hover:text-amber-700 line-clamp-1"
                       style={{ color: 'var(--color-text)' }}
                     >
                       {item.title}
@@ -129,7 +117,7 @@ export default function MenuTabs({ data, onSelectService }) {
                   </div>
 
                   <p
-                    className="text-sm leading-relaxed mb-4 line-clamp-2"
+                    className="text-[11px] sm:text-sm leading-relaxed mb-2.5 sm:mb-4 line-clamp-2"
                     style={{ color: 'var(--color-text-muted)' }}
                   >
                     {item.description}
@@ -137,7 +125,7 @@ export default function MenuTabs({ data, onSelectService }) {
 
                   {/* Tasting notes pill if available */}
                   {item.tastingNotes && (
-                    <div className="mb-4 flex flex-wrap gap-1.5">
+                    <div className="hidden sm:flex mb-4 flex-wrap gap-1.5">
                       {item.tastingNotes.map((note, nIdx) => (
                         <span
                           key={nIdx}
@@ -151,9 +139,9 @@ export default function MenuTabs({ data, onSelectService }) {
                 </div>
 
                 {/* Footer price & Order */}
-                <div className="pt-4 border-t border-gray-100 flex items-center justify-between mt-auto">
+                <div className="pt-2.5 sm:pt-4 border-t border-gray-100 flex items-center justify-between gap-1 mt-auto">
                   <span
-                    className="text-lg font-black tracking-tight"
+                    className="text-xs sm:text-lg font-black tracking-tight"
                     style={{ color: 'var(--color-primary)' }}
                   >
                     {item.price}
@@ -162,14 +150,15 @@ export default function MenuTabs({ data, onSelectService }) {
                   <a
                     href="#contact"
                     onClick={() => onSelectService && onSelectService(item.title)}
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold transition-all duration-200 hover:scale-105 active:scale-95 shadow-sm"
+                    className="inline-flex items-center gap-1 sm:gap-1.5 px-2.5 py-1.5 sm:px-4 sm:py-2 rounded-lg sm:rounded-xl text-[10px] sm:text-xs font-bold transition-all duration-200 hover:scale-105 active:scale-95 shadow-sm shrink-0"
                     style={{
                       backgroundColor: 'var(--color-primary)',
                       color: '#FFFFFF',
                     }}
                   >
-                    <Plus className="w-3.5 h-3.5" />
-                    <span>Chọn Món</span>
+                    <Plus className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                    <span className="sm:hidden">Chọn</span>
+                    <span className="hidden sm:inline">Chọn Món</span>
                   </a>
                 </div>
               </div>

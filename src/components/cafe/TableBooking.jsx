@@ -34,7 +34,7 @@ export default function TableBooking({ data, selectedService }) {
   };
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden transition-colors">
+    <section id="contact" className="py-10 sm:py-24 relative overflow-hidden transition-colors">
       {/* Toast Success Popup */}
       {showToast && (
         <div className="fixed top-5 left-4 right-4 sm:left-auto sm:right-6 sm:max-w-md z-50 bg-emerald-600 text-white rounded-2xl shadow-2xl p-4 sm:p-5 border border-emerald-400 flex items-start gap-3 sm:gap-4 animate-fade-in-up">
@@ -58,71 +58,62 @@ export default function TableBooking({ data, selectedService }) {
       )}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span
-            className="inline-block px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-3 shadow-sm"
-            style={{
-              backgroundColor: 'var(--color-primary-light)',
-              color: 'var(--color-primary)',
-            }}
-          >
-            ĐẶT BÀN & THƯỞNG THỨC
-          </span>
+        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-16">
           <h2
-            className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-4"
+            className="font-heading text-xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-2 sm:mb-4"
             style={{ color: 'var(--color-text)' }}
           >
             Giữ Chỗ Đẹp Cho Buổi Gặp Gỡ Hoàn Hảo
           </h2>
           <p
-            className="text-base sm:text-lg leading-relaxed"
+            className="text-xs sm:text-base md:text-lg leading-relaxed"
             style={{ color: 'var(--color-text-muted)' }}
           >
             Để đảm bảo luôn có vị trí ngồi ưng ý cho làm việc hay trò chuyện cùng bạn bè, quý khách vui lòng giữ bàn trước.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-10 items-stretch">
           {/* Left Info Card */}
           <div
-            className="lg:col-span-5 p-6 sm:p-10 rounded-3xl border shadow-lg flex flex-col justify-between"
+            className="lg:col-span-5 p-4 sm:p-10 rounded-2xl sm:rounded-3xl border shadow-lg flex flex-col justify-between"
             style={{
               backgroundColor: 'var(--color-surface)',
               borderColor: 'rgba(0,0,0,0.06)',
             }}
           >
             <div>
-              <h3 className="font-heading text-2xl font-bold mb-6" style={{ color: 'var(--color-text)' }}>
+              <h3 className="font-heading text-lg sm:text-2xl font-bold mb-3.5 sm:mb-6" style={{ color: 'var(--color-text)' }}>
                 Không Gian Quán
               </h3>
-              <div className="space-y-6 text-sm">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-2xl shrink-0" style={{ backgroundColor: 'var(--color-primary-light)', color: 'var(--color-primary)' }}>
-                    <MapPin className="w-5 h-5" />
+              <div className="space-y-3 sm:space-y-6 text-xs sm:text-sm">
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="p-2 sm:p-3 rounded-xl sm:rounded-2xl shrink-0" style={{ backgroundColor: 'var(--color-primary-light)', color: 'var(--color-primary)' }}>
+                    <MapPin className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   <div>
-                    <span className="block text-xs font-bold uppercase tracking-wider opacity-70" style={{ color: 'var(--color-text-muted)' }}>Địa chỉ</span>
-                    <p className="font-semibold mt-0.5" style={{ color: 'var(--color-text)' }}>{info.address}</p>
+                    <span className="block text-[10px] sm:text-xs font-bold uppercase tracking-wider opacity-70" style={{ color: 'var(--color-text-muted)' }}>Địa chỉ</span>
+                    <p className="font-semibold mt-0.5 leading-snug" style={{ color: 'var(--color-text)' }}>{info.address}</p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-2xl shrink-0" style={{ backgroundColor: 'var(--color-primary-light)', color: 'var(--color-primary)' }}>
-                    <Clock className="w-5 h-5" />
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="p-2 sm:p-3 rounded-xl sm:rounded-2xl shrink-0" style={{ backgroundColor: 'var(--color-primary-light)', color: 'var(--color-primary)' }}>
+                    <Clock className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   <div>
-                    <span className="block text-xs font-bold uppercase tracking-wider opacity-70" style={{ color: 'var(--color-text-muted)' }}>Khung giờ vàng</span>
-                    <p className="font-semibold mt-0.5" style={{ color: 'var(--color-text)' }}>{info.hours}</p>
+                    <span className="block text-[10px] sm:text-xs font-bold uppercase tracking-wider opacity-70" style={{ color: 'var(--color-text-muted)' }}>Khung giờ vàng</span>
+                    <p className="font-semibold mt-0.5 leading-snug" style={{ color: 'var(--color-text)' }}>{info.hours}</p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-2xl shrink-0" style={{ backgroundColor: 'var(--color-primary-light)', color: 'var(--color-primary)' }}>
-                    <Phone className="w-5 h-5" />
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="p-2 sm:p-3 rounded-xl sm:rounded-2xl shrink-0" style={{ backgroundColor: 'var(--color-primary-light)', color: 'var(--color-primary)' }}>
+                    <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   <div>
-                    <span className="block text-xs font-bold uppercase tracking-wider opacity-70" style={{ color: 'var(--color-text-muted)' }}>Hotline xác nhận bàn</span>
-                    <a href={`tel:${info.phone}`} className="font-extrabold text-base mt-0.5 block hover:underline" style={{ color: 'var(--color-primary)' }}>
+                    <span className="block text-[10px] sm:text-xs font-bold uppercase tracking-wider opacity-70" style={{ color: 'var(--color-text-muted)' }}>Hotline xác nhận bàn</span>
+                    <a href={`tel:${info.phone}`} className="font-extrabold text-sm sm:text-base mt-0.5 block hover:underline" style={{ color: 'var(--color-primary)' }}>
                       {info.phone}
                     </a>
                   </div>
@@ -130,8 +121,8 @@ export default function TableBooking({ data, selectedService }) {
               </div>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-gray-100">
-              <div className="p-4 rounded-2xl bg-amber-50/70 border border-amber-200/60 text-xs text-amber-900 leading-relaxed">
+            <div className="mt-4 pt-3.5 sm:mt-8 sm:pt-6 border-t border-gray-100">
+              <div className="p-2.5 sm:p-4 rounded-xl sm:rounded-2xl bg-amber-50/70 border border-amber-200/60 text-[11px] sm:text-xs text-amber-900 leading-relaxed">
                 ☕ <strong>Mẹo nhỏ:</strong> Khách đặt bàn trước từ 4 người được miễn phí 1 đĩa bánh quy bơ nướng giòn thượng hạng.
               </div>
             </div>
@@ -139,16 +130,16 @@ export default function TableBooking({ data, selectedService }) {
 
           {/* Right Form */}
           <div
-            className="lg:col-span-7 p-6 sm:p-10 rounded-3xl border shadow-xl"
+            className="lg:col-span-7 p-4 sm:p-10 rounded-2xl sm:rounded-3xl border shadow-xl"
             style={{
               backgroundColor: 'var(--color-surface)',
               borderColor: 'rgba(0,0,0,0.06)',
             }}
           >
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5">
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider mb-2" style={{ color: 'var(--color-text)' }}>
+                  <label className="block text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-1 sm:mb-2" style={{ color: 'var(--color-text)' }}>
                     Họ và tên của bạn *
                   </label>
                   <input
@@ -157,13 +148,13 @@ export default function TableBooking({ data, selectedService }) {
                     value={booking.name}
                     onChange={(e) => setBooking({ ...booking, name: e.target.value })}
                     placeholder="Nguyễn Văn A"
-                    className="w-full px-4 py-3 rounded-2xl text-sm border focus:outline-none"
+                    className="w-full px-3 py-2 sm:px-4 sm:py-3 rounded-xl sm:rounded-2xl text-sm border focus:outline-none"
                     style={{ backgroundColor: 'var(--color-bg)', borderColor: 'rgba(0,0,0,0.1)', color: 'var(--color-text)' }}
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider mb-2" style={{ color: 'var(--color-text)' }}>
+                  <label className="block text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-1 sm:mb-2" style={{ color: 'var(--color-text)' }}>
                     Số điện thoại liên hệ *
                   </label>
                   <input
@@ -172,21 +163,21 @@ export default function TableBooking({ data, selectedService }) {
                     value={booking.phone}
                     onChange={(e) => setBooking({ ...booking, phone: e.target.value })}
                     placeholder="0837.xxx.xxx"
-                    className="w-full px-4 py-3 rounded-2xl text-sm border focus:outline-none"
+                    className="w-full px-3 py-2 sm:px-4 sm:py-3 rounded-xl sm:rounded-2xl text-sm border focus:outline-none"
                     style={{ backgroundColor: 'var(--color-bg)', borderColor: 'rgba(0,0,0,0.1)', color: 'var(--color-text)' }}
                   />
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5">
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider mb-2" style={{ color: 'var(--color-text)' }}>
+                  <label className="block text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-1 sm:mb-2" style={{ color: 'var(--color-text)' }}>
                     Số lượng khách
                   </label>
                   <select
                     value={booking.guests}
                     onChange={(e) => setBooking({ ...booking, guests: e.target.value })}
-                    className="w-full px-4 py-3 rounded-2xl text-sm border focus:outline-none"
+                    className="w-full px-3 py-2 sm:px-4 sm:py-3 rounded-xl sm:rounded-2xl text-sm border focus:outline-none"
                     style={{ backgroundColor: 'var(--color-bg)', borderColor: 'rgba(0,0,0,0.1)', color: 'var(--color-text)' }}
                   >
                     <option value="1 Người">1 Người (Góc làm việc tĩnh lặng)</option>
@@ -197,13 +188,13 @@ export default function TableBooking({ data, selectedService }) {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider mb-2" style={{ color: 'var(--color-text)' }}>
+                  <label className="block text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-1 sm:mb-2" style={{ color: 'var(--color-text)' }}>
                     Khu vực mong muốn
                   </label>
                   <select
                     value={booking.space}
                     onChange={(e) => setBooking({ ...booking, space: e.target.value })}
-                    className="w-full px-4 py-3 rounded-2xl text-sm border focus:outline-none"
+                    className="w-full px-3 py-2 sm:px-4 sm:py-3 rounded-xl sm:rounded-2xl text-sm border focus:outline-none"
                     style={{ backgroundColor: 'var(--color-bg)', borderColor: 'rgba(0,0,0,0.1)', color: 'var(--color-text)' }}
                   >
                     <option value="Trong nhà yên tĩnh (Máy lạnh)">Trong nhà yên tĩnh (Máy lạnh)</option>
@@ -214,7 +205,7 @@ export default function TableBooking({ data, selectedService }) {
               </div>
 
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider mb-2" style={{ color: 'var(--color-text)' }}>
+                <label className="block text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-1 sm:mb-2" style={{ color: 'var(--color-text)' }}>
                   Ghi chú hoặc Món muốn order trước
                 </label>
                 <textarea
@@ -222,7 +213,7 @@ export default function TableBooking({ data, selectedService }) {
                   value={booking.note}
                   onChange={(e) => setBooking({ ...booking, note: e.target.value })}
                   placeholder="Thời gian ghé (ví dụ: 15h30 chiều nay) hoặc yêu cầu chỗ ngồi gần ổ cắm điện..."
-                  className="w-full px-4 py-3 rounded-2xl text-sm border focus:outline-none resize-none"
+                  className="w-full h-20 sm:h-auto px-3 py-2 sm:px-4 sm:py-3 rounded-xl sm:rounded-2xl text-sm border focus:outline-none resize-none"
                   style={{ backgroundColor: 'var(--color-bg)', borderColor: 'rgba(0,0,0,0.1)', color: 'var(--color-text)' }}
                 />
               </div>
@@ -230,7 +221,7 @@ export default function TableBooking({ data, selectedService }) {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full flex items-center justify-center gap-2 py-4 px-6 rounded-2xl font-bold text-white shadow-lg transition-transform hover:scale-[1.01] active:scale-98"
+                className="w-full flex items-center justify-center gap-2 py-3 px-5 sm:py-4 sm:px-6 rounded-xl sm:rounded-2xl text-sm sm:text-base font-bold text-white shadow-lg transition-transform hover:scale-[1.01] active:scale-98"
                 style={{ backgroundColor: 'var(--color-primary)' }}
               >
                 {isSubmitting ? (

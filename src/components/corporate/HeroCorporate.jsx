@@ -18,7 +18,7 @@ export default function HeroCorporate({ data }) {
   ];
 
   return (
-    <section id="hero" className="relative min-h-[90vh] sm:min-h-screen flex items-center justify-center pt-28 pb-20 sm:pt-32 sm:pb-24 bg-gradient-to-b from-[#F0F4FA] to-white text-slate-900 overflow-hidden">
+    <section id="hero" className="relative min-h-[68vh] sm:min-h-screen flex items-center justify-center pt-20 pb-10 sm:pt-32 sm:pb-24 bg-gradient-to-b from-[#F0F4FA] to-white text-slate-900 overflow-hidden">
       {/* Subtle geometric grid background */}
       <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
@@ -29,11 +29,11 @@ export default function HeroCorporate({ data }) {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-10 lg:gap-14 items-center">
           {/* Left Column: Heading & Value Proposition */}
           <div className="lg:col-span-7 text-left">
             <h1
-              className={`font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.18] mb-6 sm:mb-8 transition-all duration-700 ${
+              className={`font-heading text-2xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.22] sm:leading-[1.18] mb-3 sm:mb-8 transition-all duration-700 ${
                 isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
               }`}
             >
@@ -41,7 +41,7 @@ export default function HeroCorporate({ data }) {
             </h1>
 
             <p
-              className={`text-base sm:text-lg text-slate-600 leading-relaxed mb-8 sm:mb-10 max-w-2xl transition-all duration-700 delay-150 ${
+              className={`text-xs sm:text-lg text-slate-600 leading-relaxed mb-5 sm:mb-10 max-w-2xl transition-all duration-700 delay-150 ${
                 isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
               }`}
             >
@@ -50,20 +50,20 @@ export default function HeroCorporate({ data }) {
 
             {/* CTAs */}
             <div
-              className={`flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-10 sm:mb-12 transition-all duration-700 delay-300 ${
+              className={`flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 mb-5 sm:mb-12 transition-all duration-700 delay-300 ${
                 isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
               }`}
             >
               <a
                 href={primaryCta.href}
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-base font-bold text-white shadow-xl transition-all hover:scale-105 active:scale-95 bg-[#0F3B82] hover:bg-[#0A295C]"
+                className="inline-flex items-center justify-center gap-2 sm:gap-3 px-5 py-2.5 sm:px-8 sm:py-4 rounded-xl text-xs sm:text-base font-bold text-white shadow-xl transition-all hover:scale-105 active:scale-95 bg-[#0F3B82] hover:bg-[#0A295C]"
               >
                 <span>{primaryCta.label}</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
               <a
                 href={secondaryCta.href}
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-bold text-slate-700 bg-white border border-slate-300 hover:bg-slate-50 transition-all hover:scale-105 active:scale-95 shadow-sm"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:px-8 sm:py-4 rounded-xl text-xs sm:text-base font-bold text-slate-700 bg-white border border-slate-300 hover:bg-slate-50 transition-all hover:scale-105 active:scale-95 shadow-sm"
               >
                 <span>{secondaryCta.label}</span>
               </a>
@@ -71,7 +71,7 @@ export default function HeroCorporate({ data }) {
 
             {/* Highlights */}
             {highlights && (
-              <div className="pt-6 border-t border-slate-200/80 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-slate-600">
+              <div className="pt-4 sm:pt-6 border-t border-slate-200/80 grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 text-xs sm:text-sm text-slate-600">
                 {highlights.map((item, idx) => (
                   <div key={idx} className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
@@ -84,31 +84,31 @@ export default function HeroCorporate({ data }) {
 
           {/* Right Column: Visual Trust Panel & Image Card */}
           <div className="lg:col-span-5 relative">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 group">
+            <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border-2 sm:border-4 border-white bg-slate-900 group">
               <img
                 src={backgroundImage}
                 alt="Nexus Global Corporate Consulting"
-                className="w-full h-[460px] object-cover object-center transition-transform duration-700 group-hover:scale-105 filter brightness-95"
+                className="w-full h-[220px] sm:h-[340px] lg:h-[460px] object-cover object-center transition-transform duration-700 group-hover:scale-105 filter brightness-95"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
               {/* Floating Stat Card inside photo */}
-              <div className="absolute bottom-6 left-6 right-6 p-5 rounded-2xl bg-white/95 backdrop-blur-md shadow-xl border border-white/40 text-slate-900 flex items-center justify-between">
+              <div className="absolute bottom-3 left-3 right-3 sm:bottom-6 sm:left-6 sm:right-6 p-3 sm:p-5 rounded-xl sm:rounded-2xl bg-white/95 backdrop-blur-md shadow-xl border border-white/40 text-slate-900 flex items-center justify-between">
                 <div>
-                  <span className="block text-xs uppercase tracking-wider font-bold text-slate-500">Tăng Trưởng Doanh Thu TB</span>
-                  <span className="text-2xl font-black text-[#0F3B82]">+42.8% / Năm</span>
+                  <span className="block text-[10px] sm:text-xs uppercase tracking-wider font-bold text-slate-500">Tăng Trưởng Doanh Thu TB</span>
+                  <span className="text-lg sm:text-2xl font-black text-[#0F3B82]">+42.8% / Năm</span>
                 </div>
-                <div className="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center text-amber-700">
-                  <TrendingUp className="w-5 h-5" />
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-amber-100 flex items-center justify-center text-amber-700 shrink-0">
+                  <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
               </div>
             </div>
 
             {/* Trust Badges Strip below */}
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <div className="mt-4 sm:mt-6 flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-[10px] sm:text-xs font-bold text-slate-500 uppercase tracking-wider">
               {trustPartners.map((p, idx) => (
-                <div key={idx} className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-200 shadow-sm">
-                  <ShieldCheck className="w-3.5 h-3.5 text-blue-700" />
+                <div key={idx} className="flex items-center gap-1 sm:gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg bg-white border border-slate-200 shadow-sm">
+                  <ShieldCheck className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-blue-700" />
                   <span>{p}</span>
                 </div>
               ))}

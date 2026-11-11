@@ -38,57 +38,54 @@ export default function ProcessTimeline() {
   ];
 
   return (
-    <section className="py-24 bg-[#0A1A3A] text-white relative overflow-hidden">
+    <section className="py-12 sm:py-20 md:py-24 bg-[#0A1A3A] text-white relative overflow-hidden">
       {/* Background ambient shape */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-3.5 py-1 rounded-full text-xs font-mono font-bold tracking-widest uppercase mb-3 bg-blue-900/60 border border-blue-400/30 text-blue-300">
-            PHƯƠNG PHÁP LUẬN CHUẨN QUỐC TẾ
-          </span>
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-white">
+        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-12 md:mb-16">
+          <h2 className="font-heading text-xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-2 sm:mb-4 text-white">
             Lộ Trình Cố Vấn Chiến Lược 4 Giai Đoạn
           </h2>
-          <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
+          <p className="text-xs sm:text-base md:text-lg text-slate-300 leading-relaxed">
             Chúng tôi cam kết đồng hành thực chiến cùng doanh nghiệp từ giai đoạn định hướng đến khi kết quả tăng trưởng được chứng minh trên báo cáo tài chính.
           </p>
         </div>
 
         {/* 4 Phases Timeline Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 lg:gap-8">
           {phases.map((item, idx) => {
             const Icon = item.icon;
             return (
               <div
                 key={idx}
-                className="group p-8 rounded-3xl bg-slate-900/80 border border-blue-900/60 hover:border-amber-400/60 transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between shadow-xl"
+                className="group p-3.5 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl bg-slate-900/80 border border-blue-900/60 hover:border-amber-400/60 transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between shadow-xl"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-6">
-                    <span className="px-3 py-1 rounded-lg text-xs font-mono font-bold bg-blue-950 text-blue-300 border border-blue-800">
+                  <div className="flex items-center justify-between mb-3 sm:mb-6">
+                    <span className="px-2 py-0.5 sm:px-3 sm:py-1 rounded-md sm:rounded-lg text-[9px] sm:text-xs font-mono font-bold bg-blue-950 text-blue-300 border border-blue-800">
                       {item.phase}
                     </span>
-                    <div className="w-10 h-10 rounded-xl bg-blue-800/40 border border-blue-600/30 flex items-center justify-center text-amber-300 group-hover:scale-110 transition-transform">
-                      <Icon className="w-5 h-5" />
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-blue-800/40 border border-blue-600/30 flex items-center justify-center text-amber-300 group-hover:scale-110 transition-transform">
+                      <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
                     </div>
                   </div>
 
-                  <h3 className="font-heading text-lg font-bold mb-3 text-white group-hover:text-amber-300 transition-colors">
+                  <h3 className="font-heading text-xs sm:text-lg font-bold mb-1.5 sm:mb-3 text-white group-hover:text-amber-300 transition-colors leading-snug">
                     {item.title}
                   </h3>
 
-                  <p className="text-sm text-slate-300 leading-relaxed mb-6">
+                  <p className="text-[11px] sm:text-sm text-slate-300 leading-relaxed mb-3 sm:mb-6 line-clamp-3 sm:line-clamp-none">
                     {item.desc}
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-slate-800 text-xs">
-                  <div className="flex items-center justify-between text-slate-400 mb-2">
-                    <span>Thời lượng:</span>
+                <div className="mt-2 sm:mt-6 pt-2.5 sm:pt-4 border-t border-slate-800 text-[10px] sm:text-xs">
+                  <div className="flex items-center justify-between text-slate-400 mb-1.5 sm:mb-2">
+                    <span className="hidden sm:inline">Thời lượng:</span>
                     <strong className="text-amber-300">{item.time}</strong>
                   </div>
-                  <div className="p-2.5 rounded-xl bg-slate-950/70 border border-slate-800 text-[11px] text-slate-300 flex items-start gap-2">
+                  <div className="hidden sm:flex p-2.5 rounded-xl bg-slate-950/70 border border-slate-800 text-[11px] text-slate-300 items-start gap-2">
                     <CheckCircle className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
                     <span>{item.deliverable}</span>
                   </div>

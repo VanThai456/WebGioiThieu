@@ -25,39 +25,35 @@ export default function ProductGallery({ data }) {
   const currentImg = images[selectedIdx] || images[0] || { url: '', title: '', caption: '' };
 
   return (
-    <section id="gallery" className="py-20 sm:py-28 bg-slate-50/60 text-slate-900 relative overflow-hidden">
+    <section id="gallery" className="py-12 sm:py-20 md:py-28 bg-slate-50/60 text-slate-900 relative overflow-hidden">
       {/* Background Decorators */}
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-indigo-500/5 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-400/5 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-bold tracking-widest uppercase mb-4 bg-indigo-50 border border-indigo-200/80 text-indigo-700 shadow-sm">
-            <Rotate3d className="w-3.5 h-3.5 animate-spin-slow text-indigo-600" />
-            <span>STUDIO 3D PRODUCT INSPECTOR</span>
-          </div>
-
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mb-4 text-slate-900 leading-tight">
+        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10 md:mb-14">
+          <h2 className="font-heading text-xl sm:text-4xl md:text-5xl font-black tracking-tight mb-2 sm:mb-4 text-slate-900 leading-tight">
             Khám Phá Chi Tiết Từng Góc Độ
           </h2>
-          <p className="text-sm sm:text-base md:text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="text-xs sm:text-base md:text-lg text-slate-600 max-w-2xl mx-auto">
             Xoay tự do 360°, đổi màu thời gian thực và soi cận cảnh linh kiện cơ khí chính xác của AuraSound Apex trên mọi màn hình.
           </p>
 
           {/* Mode Switcher Tabs: 3D View vs Real Photos */}
-          <div className="mt-8 inline-flex p-1.5 rounded-2xl bg-slate-200/80 backdrop-blur-md shadow-inner border border-slate-300/60 max-w-full">
+          <div className="mt-5 sm:mt-8 inline-flex p-1 sm:p-1.5 rounded-xl sm:rounded-2xl bg-slate-200/80 backdrop-blur-md shadow-inner border border-slate-300/60 max-w-full">
             <button
               type="button"
               onClick={() => setViewMode('3d')}
-              className={`px-4 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all duration-300 flex items-center gap-2 ${
+              className={`px-3 sm:px-6 py-2 sm:py-2.5 rounded-lg sm:rounded-xl text-xs sm:text-sm font-extrabold transition-all duration-300 flex items-center gap-1.5 sm:gap-2 whitespace-nowrap ${
                 viewMode === '3d'
                   ? 'bg-white text-indigo-600 shadow-md scale-102 ring-1 ring-slate-900/5'
                   : 'text-slate-600 hover:text-slate-900 hover:bg-white/40'
               }`}
             >
-              <Rotate3d className={`w-4 h-4 ${viewMode === '3d' ? 'text-indigo-600 animate-spin-slow' : 'text-slate-500'}`} />
-              <span>Chế Độ 3D 360° Tương Tác</span>
+              <Rotate3d className={`w-3.5 h-3.5 sm:w-4 sm:h-4 ${viewMode === '3d' ? 'text-indigo-600 animate-spin-slow' : 'text-slate-500'}`} />
+              <span className="sm:hidden">Xem 3D 360°</span>
+              <span className="hidden sm:inline">Chế Độ 3D 360° Tương Tác</span>
               <span className="hidden sm:inline-block px-1.5 py-0.5 rounded text-[10px] font-mono bg-indigo-100 text-indigo-700 font-bold uppercase ml-1">
                 Mới
               </span>
@@ -66,15 +62,16 @@ export default function ProductGallery({ data }) {
             <button
               type="button"
               onClick={() => setViewMode('photos')}
-              className={`px-4 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all duration-300 flex items-center gap-2 ${
+              className={`px-3 sm:px-6 py-2 sm:py-2.5 rounded-lg sm:rounded-xl text-xs sm:text-sm font-extrabold transition-all duration-300 flex items-center gap-1.5 sm:gap-2 whitespace-nowrap ${
                 viewMode === 'photos'
                   ? 'bg-white text-indigo-600 shadow-md scale-102 ring-1 ring-slate-900/5'
                   : 'text-slate-600 hover:text-slate-900 hover:bg-white/40'
               }`}
             >
-              <Camera className={`w-4 h-4 ${viewMode === 'photos' ? 'text-indigo-600' : 'text-slate-500'}`} />
-              <span>Bộ Ảnh Studio 4K</span>
-              <span className="text-[11px] font-mono opacity-75">({images.length})</span>
+              <Camera className={`w-3.5 h-3.5 sm:w-4 sm:h-4 ${viewMode === 'photos' ? 'text-indigo-600' : 'text-slate-500'}`} />
+              <span className="sm:hidden">Ảnh Studio ({images.length})</span>
+              <span className="hidden sm:inline">Bộ Ảnh Studio 4K</span>
+              <span className="hidden sm:inline text-[11px] font-mono opacity-75">({images.length})</span>
             </button>
           </div>
         </div>
@@ -90,11 +87,11 @@ export default function ProductGallery({ data }) {
         {viewMode === 'photos' && (
           <div className="max-w-5xl mx-auto transition-all duration-500 animate-fade-in-up">
             {/* Large Central Spotlight Viewer */}
-            <div className="mb-6">
-              <div className="relative rounded-3xl overflow-hidden bg-white border border-slate-200/90 shadow-xl p-4 sm:p-8 flex flex-col md:flex-row items-center gap-8 group">
+            <div className="mb-4 sm:mb-6">
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-white border border-slate-200/90 shadow-xl p-3 sm:p-8 flex flex-col md:flex-row items-center gap-4 sm:gap-8 group">
                 {/* Big Image Viewport */}
                 <div
-                  className="relative w-full md:w-3/5 h-[320px] sm:h-[420px] rounded-2xl overflow-hidden bg-slate-50 shadow-inner flex items-center justify-center cursor-zoom-in"
+                  className="relative w-full md:w-3/5 h-[210px] sm:h-[340px] md:h-[420px] rounded-xl sm:rounded-2xl overflow-hidden bg-slate-50 shadow-inner flex items-center justify-center cursor-zoom-in"
                   onClick={() => setLightboxOpen(true)}
                 >
                   <img
@@ -102,28 +99,28 @@ export default function ProductGallery({ data }) {
                     alt={currentImg.title}
                     className="w-full h-full object-contain p-2 sm:p-6 transition-transform duration-700 ease-out group-hover:scale-105"
                   />
-                  <div className="absolute top-4 right-4 p-2.5 rounded-full bg-white/90 shadow-md text-slate-700 hover:text-indigo-600 border border-slate-200 transition-colors">
-                    <Maximize2 className="w-4 h-4" />
+                  <div className="absolute top-2.5 right-2.5 sm:top-4 sm:right-4 p-2 sm:p-2.5 rounded-full bg-white/90 shadow-md text-slate-700 hover:text-indigo-600 border border-slate-200 transition-colors">
+                    <Maximize2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   </div>
-                  <div className="absolute bottom-4 left-4 px-3 py-1 rounded-full text-xs font-mono font-bold bg-slate-900/80 text-white backdrop-blur-md">
+                  <div className="absolute bottom-2.5 left-2.5 sm:bottom-4 sm:left-4 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full text-[10px] sm:text-xs font-mono font-bold bg-slate-900/80 text-white backdrop-blur-md">
                     GÓC 0{selectedIdx + 1} / 0{images.length}
                   </div>
                 </div>
 
                 {/* Side Detail Card */}
-                <div className="w-full md:w-2/5 flex flex-col justify-between h-full py-2 sm:py-4 text-left">
+                <div className="w-full md:w-2/5 flex flex-col justify-between h-full py-1 sm:py-4 text-left">
                   <div>
-                    <span className="inline-block text-xs font-mono font-bold tracking-wider uppercase text-indigo-600 mb-2">
+                    <span className="inline-block text-[11px] sm:text-xs font-mono font-bold tracking-wider uppercase text-indigo-600 mb-1 sm:mb-2">
                       GÓC CHỤP #0{selectedIdx + 1}
                     </span>
-                    <h3 className="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900 mb-3 leading-snug">
+                    <h3 className="font-heading text-lg sm:text-2xl md:text-3xl font-extrabold text-slate-900 mb-2 sm:mb-3 leading-snug">
                       {currentImg.title}
                     </h3>
-                    <p className="text-sm text-slate-600 leading-relaxed mb-6">
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4 sm:mb-6">
                       {currentImg.caption || 'Gia công chính xác từ hợp kim nhôm nguyên khối hàng không và đệm da cừu protein mềm mại.'}
                     </p>
 
-                    <div className="space-y-3 pt-4 border-t border-slate-200 text-xs text-slate-600">
+                    <div className="space-y-2 sm:space-y-3 pt-3 sm:pt-4 border-t border-slate-200 text-[11px] sm:text-xs text-slate-600">
                       <div className="flex items-center gap-2">
                         <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
                         <span>Vật liệu chống xước Anodized siêu nhẹ</span>
@@ -135,11 +132,11 @@ export default function ProductGallery({ data }) {
                     </div>
                   </div>
 
-                  <div className="mt-8 pt-4">
+                  <div className="mt-4 sm:mt-8 pt-2 sm:pt-4">
                     <button
                       type="button"
                       onClick={() => setLightboxOpen(true)}
-                      className="w-full py-3 px-5 rounded-xl text-xs font-bold bg-slate-900 hover:bg-indigo-600 text-white transition-colors shadow-md flex items-center justify-center gap-2"
+                      className="w-full py-2.5 sm:py-3 px-4 sm:px-5 rounded-xl text-xs font-bold bg-slate-900 hover:bg-indigo-600 text-white transition-colors shadow-md flex items-center justify-center gap-2"
                     >
                       <Eye className="w-4 h-4" />
                       <span>Phóng To Xem Chi Tiết Ảnh Gốc</span>
@@ -150,7 +147,7 @@ export default function ProductGallery({ data }) {
             </div>
 
             {/* Thumbnail Selector Strip below */}
-            <div className="grid grid-cols-3 sm:grid-cols-6 gap-3 sm:gap-4">
+            <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 sm:gap-4">
               {images.map((img, idx) => {
                 const isSelected = selectedIdx === idx;
                 return (
@@ -158,16 +155,16 @@ export default function ProductGallery({ data }) {
                     key={idx}
                     type="button"
                     onClick={() => setSelectedIdx(idx)}
-                    className={`relative rounded-2xl overflow-hidden p-1.5 transition-all text-left ${
+                    className={`relative rounded-xl sm:rounded-2xl overflow-hidden p-1 sm:p-1.5 transition-all text-left ${
                       isSelected
-                        ? 'ring-2 ring-indigo-600 shadow-lg scale-105 bg-white'
+                        ? 'ring-2 ring-indigo-600 shadow-lg scale-102 sm:scale-105 bg-white'
                         : 'opacity-70 hover:opacity-100 bg-white border border-slate-200 hover:shadow-sm'
                     }`}
                   >
-                    <div className="h-16 sm:h-20 w-full overflow-hidden rounded-xl bg-slate-50 flex items-center justify-center">
+                    <div className="h-14 sm:h-20 w-full overflow-hidden rounded-lg sm:rounded-xl bg-slate-50 flex items-center justify-center">
                       <img src={img.url} alt={img.title} className="w-full h-full object-cover" />
                     </div>
-                    <span className="block text-[10px] font-bold text-slate-800 truncate mt-1 text-center">
+                    <span className="block text-[9px] sm:text-[10px] font-bold text-slate-800 truncate mt-1 text-center">
                       {img.title ? `${img.title.split(' ')[0]} ${img.title.split(' ')[1] || ''}` : `Góc 0${idx + 1}`}
                     </span>
                   </button>
@@ -178,8 +175,8 @@ export default function ProductGallery({ data }) {
         )}
 
         {/* Responsive Cross-Platform Capability Banner */}
-        <div className="max-w-5xl mx-auto mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div className="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm flex items-start gap-3.5">
+        <div className="max-w-5xl mx-auto mt-8 sm:mt-12 grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-4">
+          <div className="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-white border border-slate-200/80 shadow-sm flex items-start gap-3 sm:gap-3.5">
             <div className="w-9 h-9 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-indigo-600 shrink-0">
               <Smartphone className="w-4 h-4" />
             </div>
@@ -193,7 +190,7 @@ export default function ProductGallery({ data }) {
             </div>
           </div>
 
-          <div className="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm flex items-start gap-3.5">
+          <div className="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-white border border-slate-200/80 shadow-sm flex items-start gap-3 sm:gap-3.5">
             <div className="w-9 h-9 rounded-xl bg-sky-50 border border-sky-100 flex items-center justify-center text-sky-600 shrink-0">
               <Laptop className="w-4 h-4" />
             </div>
@@ -207,7 +204,7 @@ export default function ProductGallery({ data }) {
             </div>
           </div>
 
-          <div className="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm flex items-start gap-3.5">
+          <div className="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-white border border-slate-200/80 shadow-sm flex items-start gap-3 sm:gap-3.5">
             <div className="w-9 h-9 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600 shrink-0">
               <CheckCircle2 className="w-4 h-4" />
             </div>

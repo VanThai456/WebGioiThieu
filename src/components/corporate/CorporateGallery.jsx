@@ -15,22 +15,19 @@ export default function CorporateGallery({ data }) {
   ];
 
   return (
-    <section id="gallery" className="py-24 bg-slate-50 text-slate-900 relative">
+    <section id="gallery" className="py-12 sm:py-20 md:py-24 bg-slate-50 text-slate-900 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-3 bg-blue-100 text-blue-900 border border-blue-200">
-            DỰ ÁN & HỒ SƠ NĂNG LỰC
-          </span>
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-slate-900">
+        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-12 md:mb-16">
+          <h2 className="font-heading text-xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-2 sm:mb-4 text-slate-900">
             Dấu Ấn Thành Công Qua Những Thương Vụ Lớn
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+          <p className="text-xs sm:text-base md:text-lg text-slate-600 leading-relaxed">
             Mỗi hình ảnh là một minh chứng thực tế cho năng lực triển khai, bảo mật và cam kết kết quả đo lường được của Nexus Global.
           </p>
         </div>
 
         {/* Bento Grid Case Studies */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
           {images.map((img, idx) => {
             const isWide = idx === 0 || idx === 3;
             const cs = caseStudies[idx % caseStudies.length];
@@ -38,8 +35,10 @@ export default function CorporateGallery({ data }) {
               <div
                 key={idx}
                 onClick={() => setActiveIdx(idx)}
-                className={`group relative rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 cursor-pointer flex flex-col ${
-                  isWide ? 'md:col-span-2 h-[340px] sm:h-[380px]' : 'h-[340px] sm:h-[380px]'
+                className={`group relative rounded-2xl sm:rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 cursor-pointer flex flex-col ${
+                  isWide
+                    ? 'col-span-2 h-[170px] sm:h-[280px] md:h-[380px]'
+                    : 'h-[155px] sm:h-[280px] md:h-[380px]'
                 }`}
               >
                 <img
@@ -48,30 +47,30 @@ export default function CorporateGallery({ data }) {
                   className="w-full h-full object-cover object-center filter brightness-95 group-hover:scale-105 transition-transform duration-700"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/45 to-transparent" />
 
                 {/* Top Badge */}
-                <div className="absolute top-4 left-4 flex items-center gap-2">
-                  <span className="px-3 py-1 rounded-lg text-[11px] font-bold uppercase bg-blue-900/90 text-white backdrop-blur-md border border-blue-700 shadow-sm">
+                <div className="absolute top-2.5 left-2.5 sm:top-4 sm:left-4 flex items-center gap-2">
+                  <span className="px-2 py-0.5 sm:px-3 sm:py-1 rounded-md sm:rounded-lg text-[9px] sm:text-[11px] font-bold uppercase bg-blue-900/90 text-white backdrop-blur-md border border-blue-700 shadow-sm">
                     {cs.tag}
                   </span>
                 </div>
 
-                <div className="absolute top-4 right-4 p-2.5 rounded-full bg-white/20 backdrop-blur-md text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="hidden sm:block absolute top-4 right-4 p-2.5 rounded-full bg-white/20 backdrop-blur-md text-white opacity-0 group-hover:opacity-100 transition-opacity">
                   <Maximize2 className="w-4 h-4" />
                 </div>
 
                 {/* Bottom details card */}
-                <div className="absolute bottom-5 left-5 right-5 text-white">
-                  <div className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-300 mb-1.5 bg-black/40 px-2.5 py-0.5 rounded-md backdrop-blur-sm">
-                    <TrendingUp className="w-3.5 h-3.5" />
-                    <span>Kết quả: {cs.result}</span>
+                <div className="absolute bottom-2.5 left-2.5 right-2.5 sm:bottom-5 sm:left-5 sm:right-5 text-white">
+                  <div className="inline-flex items-center gap-1 sm:gap-1.5 text-[9px] sm:text-xs font-bold text-amber-300 mb-1 sm:mb-1.5 bg-black/45 px-2 py-0.5 sm:px-2.5 rounded-md backdrop-blur-sm max-w-full truncate">
+                    <TrendingUp className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" />
+                    <span className="truncate">{cs.result}</span>
                   </div>
-                  <h3 className="font-heading text-lg sm:text-xl font-bold leading-snug drop-shadow-md">
+                  <h3 className="font-heading text-xs sm:text-lg md:text-xl font-bold leading-snug drop-shadow-md line-clamp-2 sm:line-clamp-none">
                     {img.title}
                   </h3>
                   {img.caption && (
-                    <p className="text-xs text-slate-300 mt-1 line-clamp-1">
+                    <p className="hidden sm:block text-xs text-slate-300 mt-1 line-clamp-1">
                       {img.caption}
                     </p>
                   )}

@@ -56,7 +56,7 @@ export default function Hero({ data }) {
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white my-auto">
         {/* Hero Title (Slogan) */}
         <h1
-          className={`font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.18] mb-6 sm:mb-8 drop-shadow-md transition-all duration-700 ${
+          className={`font-heading text-2xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.22] sm:leading-[1.18] mb-3 sm:mb-8 drop-shadow-md transition-all duration-700 ${
             isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >
@@ -65,7 +65,7 @@ export default function Hero({ data }) {
 
         {/* Hero Description */}
         <p
-          className={`max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-gray-200 font-normal leading-relaxed mb-8 sm:mb-10 drop-shadow transition-all duration-700 delay-150 ${
+          className={`max-w-3xl mx-auto text-xs sm:text-lg md:text-xl text-gray-200 font-normal leading-relaxed mb-5 sm:mb-10 drop-shadow transition-all duration-700 delay-150 ${
             isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >

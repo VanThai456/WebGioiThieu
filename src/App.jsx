@@ -33,7 +33,7 @@ import CorporateV3 from './components/corporate/variants/CorporateV3';
 
 // Shared Components
 import Stats from './components/Stats';
-import { Sparkles, X } from 'lucide-react';
+import { X } from 'lucide-react';
 
 export default function App() {
   const [brandData, setBrandData] = useState(() => getCurrentBrandData());
@@ -133,12 +133,13 @@ export default function App() {
 
       {/* Floating Variant Switch Toast */}
       {variantToast && (
-        <div className="fixed top-20 left-1/2 -translate-x-1/2 z-50 px-5 py-3 rounded-2xl bg-slate-900/95 text-white shadow-2xl border border-amber-400/60 backdrop-blur-md flex items-center gap-3 animate-fade-in-up">
-          <Sparkles className="w-5 h-5 text-amber-300 animate-spin-slow shrink-0" />
-          <span className="text-xs sm:text-sm font-bold">{variantToast}</span>
-          <button type="button" onClick={() => setVariantToast('')} className="p-1 hover:bg-white/20 rounded-lg text-white">
-            <X className="w-4 h-4" />
-          </button>
+        <div className="fixed top-16 sm:top-20 inset-x-3 sm:inset-x-6 z-50 flex justify-center pointer-events-none">
+          <div className="pointer-events-auto max-w-sm sm:max-w-lg px-4 py-2.5 sm:px-5 sm:py-3 rounded-2xl bg-slate-900/95 text-white shadow-2xl border border-amber-400/60 backdrop-blur-md flex items-center justify-center gap-2.5 sm:gap-3 animate-fade-in-up">
+            <span className="text-xs sm:text-sm font-bold text-center">{variantToast}</span>
+            <button type="button" onClick={() => setVariantToast('')} className="p-1 hover:bg-white/20 rounded-lg text-white shrink-0" aria-label="Đóng thông báo">
+              <X className="w-4 h-4" />
+            </button>
+          </div>
         </div>
       )}
 
@@ -254,7 +255,7 @@ export default function App() {
       {/* 3. Footer */}
       <Footer data={brandData} />
 
-      {/* 4. Nút "Đổi giao diện" + Bong bóng Zalo cố định góc phải */}
+      {/* 4. Bong bóng Zalo góc trái + Nút "Đổi giao diện" & Nút lên đầu trang góc phải */}
       <FloatingCta
         data={brandData}
         layoutVariant={layoutVariant}

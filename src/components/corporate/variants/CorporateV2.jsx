@@ -28,27 +28,24 @@ export default function CorporateV2({ data, onSelectService }) {
   return (
     <div className="bg-[#F8FAFC] text-slate-900 transition-colors">
       {/* 1. Digital Transformation Agency Hero */}
-      <section className="pt-28 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <section className="pt-20 pb-10 sm:pt-28 sm:pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="max-w-4xl">
-          <span className="text-xs font-mono font-bold tracking-widest uppercase text-blue-700 bg-blue-100 px-3 py-1 rounded-md">
-            DIGITAL TRANSFORMATION & CLOUD • BỘ GIAO DIỆN 2
-          </span>
-          <h1 className="font-heading text-4xl sm:text-6xl font-extrabold text-slate-900 mt-4 mb-6 tracking-tight leading-[1.15]">
+          <h1 className="font-heading text-2xl sm:text-6xl font-extrabold text-slate-900 mb-3 sm:mb-6 tracking-tight leading-[1.22] sm:leading-[1.15]">
             Tăng Tốc Chuyển Đổi Số & Tự Động Hóa Vận Hành Doanh Nghiệp
           </h1>
-          <p className="text-base sm:text-xl text-slate-600 leading-relaxed mb-8 max-w-2xl">
+          <p className="text-xs sm:text-xl text-slate-600 leading-relaxed mb-5 sm:mb-8 max-w-2xl">
             Chúng tôi hiện đại hóa hệ thống công nghệ thông tin lõi (Legacy IT), đưa điện toán đám mây và trí tuệ nhân tạo vào quy trình vận hành giúp doanh nghiệp dẫn đầu làn sóng chuyển đổi số.
           </p>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-2.5 sm:gap-4">
             <a
               href="#solutions"
-              className="px-8 py-4 rounded-xl font-bold text-sm text-white shadow-xl hover:scale-105 transition-all bg-blue-900 hover:bg-blue-800"
+              className="text-center px-5 py-2.5 sm:px-8 sm:py-4 rounded-xl font-bold text-xs sm:text-sm text-white shadow-xl hover:scale-105 transition-all bg-blue-900 hover:bg-blue-800"
             >
               Khám Phá Giải Pháp Công Nghệ
             </a>
             <a
               href="#contact"
-              className="px-8 py-4 rounded-xl font-bold text-sm text-slate-800 bg-white border border-slate-300 hover:bg-slate-50 transition-all shadow-sm"
+              className="text-center px-5 py-2.5 sm:px-8 sm:py-4 rounded-xl font-bold text-xs sm:text-sm text-slate-800 bg-white border border-slate-300 hover:bg-slate-50 transition-all shadow-sm"
             >
               Đăng Ký Khảo Sát Hệ Thống IT
             </a>
@@ -57,31 +54,31 @@ export default function CorporateV2({ data, onSelectService }) {
       </section>
 
       {/* 2. Interactive Digital Solutions Grid */}
-      <section id="solutions" className="py-20 bg-white border-y border-slate-200">
+      <section id="solutions" className="py-10 sm:py-20 bg-white border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">
+          <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-16">
+            <h2 className="font-heading text-xl sm:text-4xl font-extrabold text-slate-900 mb-2 sm:mb-4">
               Năng Lực Công Nghệ Lõi Của Nexus Digital
             </h2>
-            <p className="text-sm sm:text-base text-slate-500">
+            <p className="text-xs sm:text-base text-slate-500">
               Được thiết kế theo tiêu chuẩn kiến trúc Microservices hiện đại, dễ dàng mở rộng theo quy mô doanh nghiệp.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8">
             {digitalSolutions.map((sol, idx) => {
               const Icon = sol.icon;
               return (
                 <div
                   key={idx}
-                  className="p-8 rounded-3xl bg-slate-50 border border-slate-200 hover:border-blue-700 hover:shadow-2xl transition-all duration-300 card-hover-effect flex flex-col justify-between"
+                  className="p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-slate-50 border border-slate-200 hover:border-blue-700 hover:shadow-2xl transition-all duration-300 card-hover-effect flex flex-col justify-between"
                 >
                   <div>
-                    <div className="w-14 h-14 rounded-2xl bg-blue-900 text-white flex items-center justify-center mb-6 shadow-md">
-                      <Icon className="w-7 h-7 text-amber-300" />
+                    <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-blue-900 text-white flex items-center justify-center mb-4 sm:mb-6 shadow-md">
+                      <Icon className="w-5 h-5 sm:w-7 sm:h-7 text-amber-300" />
                     </div>
-                    <h3 className="font-heading text-xl font-bold text-slate-900 mb-3">{sol.title}</h3>
-                    <p className="text-sm text-slate-600 leading-relaxed mb-6">{sol.desc}</p>
+                    <h3 className="font-heading text-base sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3">{sol.title}</h3>
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4 sm:mb-6">{sol.desc}</p>
                   </div>
 
                   <div className="pt-4 border-t border-slate-200 text-xs font-bold text-blue-900 flex items-center gap-2">

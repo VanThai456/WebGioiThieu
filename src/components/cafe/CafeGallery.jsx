@@ -16,40 +16,36 @@ export default function CafeGallery({ data }) {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [activeIdx, images.length]);
 
-  // Rotations for the polaroid scrapbook feel
-  const rotations = ['rotate-[-1.5deg]', 'rotate-[2deg]', 'rotate-[-2deg]', 'rotate-[1.5deg]', 'rotate-[-1deg]', 'rotate-[2.5deg]'];
+  // Rotations for the polaroid scrapbook feel (applied on sm+ so mobile grid stays straight & clean)
+  const rotations = ['sm:rotate-[-1.5deg]', 'sm:rotate-[2deg]', 'sm:rotate-[-2deg]', 'sm:rotate-[1.5deg]', 'sm:rotate-[-1deg]', 'sm:rotate-[2.5deg]'];
 
   return (
-    <section id="gallery" className="py-24 bg-[#FAF6F0] relative overflow-hidden transition-colors">
+    <section id="gallery" className="py-10 sm:py-20 md:py-24 bg-[#FAF6F0] relative overflow-hidden transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Vintage Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4 bg-amber-100 text-amber-900 border border-amber-200 shadow-sm">
-            <Camera className="w-4 h-4 text-amber-700" />
-            <span>GÓC ẢNH & KỶ NIỆM BÌNH YÊN</span>
-          </div>
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#2C1A11] tracking-tight mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-12 md:mb-16">
+          <h2 className="font-heading text-xl sm:text-4xl md:text-5xl font-extrabold text-[#2C1A11] tracking-tight mb-2 sm:mb-4">
             Bức Tường Kỷ Niệm Tại The Artisan
           </h2>
-          <p className="text-base sm:text-lg text-[#7A6A5E] leading-relaxed">
+          <p className="text-xs sm:text-base md:text-lg text-[#7A6A5E] leading-relaxed">
             Từng bức ảnh polaroid lưu giữ lại hương thơm cà phê, góc bàn gỗ quen thuộc và những nụ cười ấm áp của khách ghé thăm.
           </p>
         </div>
 
         {/* Polaroid Scrapbook Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-8 lg:gap-10">
           {images.map((img, idx) => {
             const rot = rotations[idx % rotations.length];
             return (
               <div
                 key={idx}
                 onClick={() => setActiveIdx(idx)}
-                className={`group bg-white p-4 pb-6 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 hover:scale-[1.03] cursor-pointer border border-amber-100/80 ${rot} hover:rotate-0`}
+                className={`group bg-white p-2 pb-3 sm:p-4 sm:pb-6 rounded-xl sm:rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 hover:scale-[1.03] cursor-pointer border border-amber-100/80 ${rot} hover:rotate-0`}
               >
                 {/* Vintage Tape on top */}
-                <div className="w-16 h-4 bg-amber-200/50 backdrop-blur-sm mx-auto -mt-6 mb-3 rounded-sm shadow-inner opacity-75 border-t border-b border-amber-300/40" />
+                <div className="hidden sm:block w-16 h-4 bg-amber-200/50 backdrop-blur-sm mx-auto -mt-6 mb-3 rounded-sm shadow-inner opacity-75 border-t border-b border-amber-300/40" />
 
-                <div className="relative h-64 sm:h-72 w-full overflow-hidden rounded-xl bg-amber-50">
+                <div className="relative h-32 sm:h-64 md:h-72 w-full overflow-hidden rounded-lg sm:rounded-xl bg-amber-50">
                   <img
                     src={img.url}
                     alt={img.title}
@@ -57,23 +53,23 @@ export default function CafeGallery({ data }) {
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <span className="p-3 rounded-full bg-white/90 text-amber-900 shadow-lg transform scale-90 group-hover:scale-100 transition-transform">
-                      <Maximize2 className="w-5 h-5" />
+                    <span className="p-2 sm:p-3 rounded-full bg-white/90 text-amber-900 shadow-lg transform scale-90 group-hover:scale-100 transition-transform">
+                      <Maximize2 className="w-4 h-4 sm:w-5 sm:h-5" />
                     </span>
                   </div>
                 </div>
 
                 {/* Polaroid Caption bottom */}
-                <div className="mt-4 px-2 flex items-center justify-between">
-                  <div>
-                    <h3 className="font-heading text-lg font-bold text-[#2C1A11] group-hover:text-amber-800 transition-colors">
+                <div className="mt-2 sm:mt-4 px-1 sm:px-2 flex items-center justify-between gap-1">
+                  <div className="min-w-0">
+                    <h3 className="font-heading text-xs sm:text-lg font-bold text-[#2C1A11] group-hover:text-amber-800 transition-colors truncate">
                       {img.title}
                     </h3>
-                    <p className="text-xs text-[#7A6A5E] mt-0.5 line-clamp-1 italic">
+                    <p className="hidden sm:block text-xs text-[#7A6A5E] mt-0.5 line-clamp-1 italic">
                       {img.caption}
                     </p>
                   </div>
-                  <Heart className="w-4 h-4 text-amber-400 group-hover:text-red-500 transition-colors shrink-0" />
+                  <Heart className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400 group-hover:text-red-500 transition-colors shrink-0" />
                 </div>
               </div>
             );

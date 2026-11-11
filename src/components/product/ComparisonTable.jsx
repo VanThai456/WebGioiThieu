@@ -47,22 +47,22 @@ export default function ComparisonTable({ onSelectVersion }) {
   };
 
   return (
-    <section id="comparison" className="py-24 bg-white text-slate-900 relative">
+    <section id="comparison" className="py-12 sm:py-20 md:py-24 bg-white text-slate-900 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-3.5 py-1 rounded-full text-xs font-mono font-bold tracking-widest uppercase mb-3 bg-indigo-50 border border-indigo-200 text-indigo-700">
-            BẢNG SO SÁNH THÔNG SỐ
-          </span>
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mb-4 text-slate-900">
+        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-12 md:mb-16">
+          <h2 className="font-heading text-xl sm:text-4xl md:text-5xl font-black tracking-tight mb-2 sm:mb-4 text-slate-900">
             Chọn Phiên Bản Phù Hợp Với Bạn
           </h2>
-          <p className="text-base sm:text-lg text-slate-600">
+          <p className="text-xs sm:text-base md:text-lg text-slate-600">
             So sánh chi tiết từng tính năng để tìm ra chiếc tai nghe hoàn hảo cho phong cách thưởng thức âm nhạc của bạn.
+          </p>
+          <p className="md:hidden text-[11px] font-mono text-indigo-600 mt-3 font-semibold">
+            ← Vuốt ngang để xem đầy đủ bảng so sánh →
           </p>
         </div>
 
         {/* Comparison Matrix Table in Light Studio Theme */}
-        <div className="overflow-x-auto rounded-3xl border border-slate-200 bg-white shadow-xl">
+        <div className="overflow-x-auto rounded-2xl sm:rounded-3xl border border-slate-200 bg-white shadow-xl">
           <table className="w-full text-left border-collapse min-w-[650px]">
             <thead>
               <tr className="border-b border-slate-200 bg-slate-50">

@@ -177,30 +177,31 @@ export default function Product3DViewer() {
       }`}
     >
       {/* Top Header Toolbar */}
-      <div className="w-full flex flex-wrap items-center justify-between gap-3 p-4 sm:p-6 border-b border-white/10 relative z-20">
-        <div className="flex items-center gap-2.5">
-          <div className="w-9 h-9 rounded-xl bg-indigo-600/30 border border-indigo-400/40 flex items-center justify-center text-indigo-400 shadow-inner">
-            <Rotate3d className="w-5 h-5 animate-spin-slow" />
+      <div className="w-full flex flex-wrap items-center justify-between gap-2 sm:gap-3 p-3 sm:p-5 md:p-6 border-b border-white/10 relative z-20">
+        <div className="flex items-center gap-2 sm:gap-2.5">
+          <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-indigo-600/30 border border-indigo-400/40 flex items-center justify-center text-indigo-400 shadow-inner shrink-0">
+            <Rotate3d className="w-4 h-4 sm:w-5 sm:h-5 animate-spin-slow" />
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <h3 className="text-sm sm:text-base font-extrabold tracking-tight text-white">
+              <h3 className="text-xs sm:text-base font-extrabold tracking-tight text-white">
                 Showroom 3D Tương Tác
               </h3>
-              <span className="px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center gap-1">
+              <span className="px-1.5 sm:px-2 py-0.5 rounded-full text-[9px] sm:text-[10px] font-mono font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center gap-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
                 60 FPS
               </span>
             </div>
-            <p className="text-[11px] text-slate-400 flex items-center gap-1.5 mt-0.5">
+            <p className="text-[10px] sm:text-[11px] text-slate-400 flex items-center gap-1 sm:gap-1.5 mt-0.5">
               {isMobileDevice ? (
                 <>
-                  <Smartphone className="w-3.5 h-3.5 text-indigo-400 inline" />
-                  <span>Chế độ Di Động Siêu Nhẹ (269 KB) • Vuốt 1 ngón xoay • Chụm phóng to</span>
+                  <Smartphone className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-indigo-400 inline shrink-0" />
+                  <span className="sm:hidden">Bản Di Động (269 KB) • Vuốt xoay 360°</span>
+                  <span className="hidden sm:inline">Chế độ Di Động Siêu Nhẹ (269 KB) • Vuốt 1 ngón xoay • Chụm phóng to</span>
                 </>
               ) : (
                 <>
-                  <Laptop className="w-3.5 h-3.5 text-indigo-400 inline" />
+                  <Laptop className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-indigo-400 inline shrink-0" />
                   <span>Kéo chuột để xoay 360° • Cuộn chuột để zoom cận cảnh</span>
                 </>
               )}
@@ -250,34 +251,34 @@ export default function Product3DViewer() {
       </div>
 
       {/* Main 3D Viewport Area */}
-      <div className="relative w-full flex flex-col lg:flex-row items-center justify-between p-3 sm:p-6 gap-6">
+      <div className="relative w-full flex flex-col lg:flex-row items-center justify-between p-2.5 sm:p-6 gap-4 sm:gap-6">
         {/* 3D Canvas Box */}
         <div
           className={`relative w-full ${
-            isFullscreen ? 'lg:w-3/4 h-[60vh] sm:h-[70vh]' : 'lg:w-2/3 h-[380px] sm:h-[460px] md:h-[500px]'
+            isFullscreen ? 'lg:w-3/4 h-[52vh] sm:h-[70vh]' : 'lg:w-2/3 h-[250px] sm:h-[380px] md:h-[500px]'
           } rounded-2xl overflow-hidden bg-radial from-slate-800/80 via-slate-900/90 to-slate-950 flex items-center justify-center border border-white/5 shadow-inner`}
         >
           {/* Subtle Studio Lighting Rings */}
           <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
-            <div className="w-[320px] sm:w-[420px] h-[320px] sm:h-[420px] rounded-full border border-indigo-500/10 animate-pulse-slow" />
-            <div className="absolute w-[200px] sm:w-[260px] h-[200px] sm:h-[260px] rounded-full bg-indigo-500/10 blur-[80px]" />
+            <div className="w-[210px] sm:w-[420px] h-[210px] sm:h-[420px] rounded-full border border-indigo-500/10 animate-pulse-slow" />
+            <div className="absolute w-[140px] sm:w-[260px] h-[140px] sm:h-[260px] rounded-full bg-indigo-500/10 blur-[60px] sm:blur-[80px]" />
           </div>
 
           {/* Model Loading Shimmer / Progress */}
           {!isLoaded && (
-            <div className="absolute inset-0 z-30 flex flex-col items-center justify-center bg-slate-950/90 backdrop-blur-md text-center p-6">
-              <div className="relative w-16 h-16 mb-4 flex items-center justify-center">
-                <div className="w-16 h-16 rounded-full border-2 border-indigo-500/20 border-t-indigo-500 animate-spin" />
-                <Box className="w-7 h-7 text-indigo-400 absolute" />
+            <div className="absolute inset-0 z-30 flex flex-col items-center justify-center bg-slate-950/90 backdrop-blur-md text-center p-4 sm:p-6">
+              <div className="relative w-12 h-12 sm:w-16 sm:h-16 mb-3 sm:mb-4 flex items-center justify-center">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full border-2 border-indigo-500/20 border-t-indigo-500 animate-spin" />
+                <Box className="w-5 h-5 sm:w-7 sm:h-7 text-indigo-400 absolute" />
               </div>
-              <p className="text-sm font-bold text-white mb-1">Đang Tải Mô Hình 3D Studio...</p>
-              <div className="w-48 h-1.5 bg-slate-800 rounded-full overflow-hidden mt-2">
+              <p className="text-xs sm:text-sm font-bold text-white mb-1">Đang Tải Mô Hình 3D Studio...</p>
+              <div className="w-40 sm:w-48 h-1.5 bg-slate-800 rounded-full overflow-hidden mt-2">
                 <div
                   className="h-full bg-gradient-to-r from-indigo-500 to-cyan-400 transition-all duration-300 rounded-full"
                   style={{ width: `${Math.max(loadProgress, 20)}%` }}
                 />
               </div>
-              <span className="text-[11px] font-mono text-slate-400 mt-2">
+              <span className="text-[10px] sm:text-[11px] font-mono text-slate-400 mt-2">
                 {isMobileDevice ? 'Tối ưu bản di động (269 KB)' : 'Tải chuẩn HD (540 KB)'}
               </span>
             </div>
@@ -305,15 +306,16 @@ export default function Product3DViewer() {
           />
 
           {/* Floating On-Screen Gesture Instructions */}
-          <div className="absolute bottom-3 left-3 sm:left-4 z-20 pointer-events-none flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-950/80 backdrop-blur-md border border-white/10 text-[11px] text-slate-300">
-            <Rotate3d className="w-3.5 h-3.5 text-indigo-400 animate-spin-slow shrink-0" />
-            <span>Kéo chuột hoặc vuốt để xoay 360° mọi góc</span>
+          <div className="absolute bottom-2.5 left-2.5 sm:bottom-3 sm:left-4 z-20 pointer-events-none flex items-center gap-1.5 sm:gap-2 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full bg-slate-950/80 backdrop-blur-md border border-white/10 text-[10px] sm:text-[11px] text-slate-300">
+            <Rotate3d className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-indigo-400 animate-spin-slow shrink-0" />
+            <span className="sm:hidden">Vuốt xoay 360°</span>
+            <span className="hidden sm:inline">Kéo chuột hoặc vuốt để xoay 360° mọi góc</span>
           </div>
 
           {/* Current Colorway Watermark Pill */}
-          <div className="absolute top-3 left-3 sm:left-4 z-20 pointer-events-none px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-[11px] font-mono font-bold text-white flex items-center gap-2">
+          <div className="absolute top-2.5 left-2.5 sm:top-3 sm:left-4 z-20 pointer-events-none px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-[10px] sm:text-[11px] font-mono font-bold text-white flex items-center gap-1.5 sm:gap-2">
             <span
-              className="w-2.5 h-2.5 rounded-full border border-white/50"
+              className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full border border-white/50"
               style={{ backgroundColor: selectedColor.swatch }}
             />
             <span>{selectedColor.name}</span>
@@ -321,18 +323,18 @@ export default function Product3DViewer() {
         </div>
 
         {/* Interactive Side Control Panel */}
-        <div className={`w-full ${isFullscreen ? 'lg:w-1/4' : 'lg:w-1/3'} flex flex-col justify-between gap-5`}>
+        <div className={`w-full ${isFullscreen ? 'lg:w-1/4' : 'lg:w-1/3'} flex flex-col justify-between gap-3 sm:gap-5`}>
           {/* 1. Color Customizer */}
-          <div className="p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md">
-            <div className="flex items-center justify-between mb-3">
-              <span className="text-xs font-mono font-bold text-indigo-300 tracking-wider uppercase flex items-center gap-1.5">
+          <div className="p-3 sm:p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md">
+            <div className="flex items-center justify-between mb-2.5 sm:mb-3">
+              <span className="text-[11px] sm:text-xs font-mono font-bold text-indigo-300 tracking-wider uppercase flex items-center gap-1.5">
                 <Sparkles className="w-3.5 h-3.5" />
                 Đổi Màu Sắc 3D Trực Tiếp
               </span>
-              <span className="text-[11px] text-slate-400">4 Phiên bản</span>
+              <span className="text-[10px] sm:text-[11px] text-slate-400">4 Phiên bản</span>
             </div>
 
-            <div className="grid grid-cols-2 gap-2.5">
+            <div className="grid grid-cols-2 gap-2 sm:gap-2.5">
               {COLOR_VARIANTS.map((variant) => {
                 const isSelected = selectedColor.id === variant.id;
                 return (
@@ -340,23 +342,23 @@ export default function Product3DViewer() {
                     key={variant.id}
                     type="button"
                     onClick={() => applyColorway(variant)}
-                    className={`relative p-3 rounded-xl border transition-all text-left flex items-start gap-2.5 ${
+                    className={`relative p-2 sm:p-3 rounded-xl border transition-all text-left flex items-center sm:items-start gap-2 sm:gap-2.5 ${
                       isSelected
                         ? 'bg-indigo-600/20 border-indigo-400 ring-2 ring-indigo-500/50 shadow-lg'
                         : 'bg-white/5 border-white/10 hover:border-white/30 hover:bg-white/10'
                     }`}
                   >
                     <span
-                      className="w-5 h-5 rounded-full shrink-0 border-2 border-white/40 shadow-sm mt-0.5 flex items-center justify-center"
+                      className="w-4 h-4 sm:w-5 sm:h-5 rounded-full shrink-0 border-2 border-white/40 shadow-sm sm:mt-0.5 flex items-center justify-center"
                       style={{ backgroundColor: variant.swatch }}
                     >
-                      {isSelected && <Check className="w-3 h-3 text-white drop-shadow" />}
+                      {isSelected && <Check className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white drop-shadow" />}
                     </span>
                     <div className="overflow-hidden">
-                      <p className="text-xs font-bold text-white truncate leading-tight">
+                      <p className="text-[11px] sm:text-xs font-bold text-white truncate leading-tight">
                         {variant.name}
                       </p>
-                      <span className="text-[10px] text-indigo-300 block mt-0.5">
+                      <span className="text-[9px] sm:text-[10px] text-indigo-300 block mt-0.5 truncate">
                         {variant.badge}
                       </span>
                     </div>
@@ -365,14 +367,14 @@ export default function Product3DViewer() {
               })}
             </div>
 
-            <p className="text-[11px] text-slate-400 mt-3 italic leading-relaxed border-t border-white/10 pt-2.5">
+            <p className="text-[10px] sm:text-[11px] text-slate-400 mt-2.5 sm:mt-3 italic leading-relaxed border-t border-white/10 pt-2 sm:pt-2.5">
               {selectedColor.description}
             </p>
           </div>
 
           {/* 2. Fast Camera Angle Switcher (Clean preset buttons) */}
-          <div className="p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md">
-            <span className="text-xs font-mono font-bold text-indigo-300 tracking-wider uppercase block mb-3 flex items-center gap-1.5">
+          <div className="p-3 sm:p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md">
+            <span className="text-[11px] sm:text-xs font-mono font-bold text-indigo-300 tracking-wider uppercase block mb-2.5 sm:mb-3 flex items-center gap-1.5">
               <Compass className="w-3.5 h-3.5" />
               Chọn Góc Nhìn Nhanh
             </span>
@@ -385,7 +387,7 @@ export default function Product3DViewer() {
                     key={preset.id}
                     type="button"
                     onClick={() => handleSelectAngle(preset)}
-                    className={`px-3 py-2 rounded-xl border text-xs font-bold transition-all flex items-center justify-center gap-1.5 ${
+                    className={`px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-xl border text-[11px] sm:text-xs font-bold transition-all flex items-center justify-center gap-1.5 ${
                       isActive
                         ? 'bg-indigo-600 border-indigo-400 text-white shadow-md'
                         : 'bg-white/5 border-white/10 text-slate-300 hover:bg-white/10 hover:text-white'
@@ -400,20 +402,20 @@ export default function Product3DViewer() {
 
           {/* 3. Key Specs Snapshot */}
           <div className="grid grid-cols-3 gap-2 text-center">
-            <div className="p-2.5 rounded-xl bg-white/5 border border-white/5">
-              <Battery className="w-4 h-4 text-emerald-400 mx-auto mb-1" />
-              <p className="text-xs font-mono font-bold text-white">65 Giờ</p>
-              <p className="text-[10px] text-slate-400">Thời Lượng Pin</p>
+            <div className="p-2 sm:p-2.5 rounded-xl bg-white/5 border border-white/5">
+              <Battery className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-400 mx-auto mb-0.5 sm:mb-1" />
+              <p className="text-[11px] sm:text-xs font-mono font-bold text-white">65 Giờ</p>
+              <p className="text-[9px] sm:text-[10px] text-slate-400">Thời Lượng Pin</p>
             </div>
-            <div className="p-2.5 rounded-xl bg-white/5 border border-white/5">
-              <Feather className="w-4 h-4 text-sky-400 mx-auto mb-1" />
-              <p className="text-xs font-mono font-bold text-white">240g</p>
-              <p className="text-[10px] text-slate-400">Siêu Êm Nhẹ</p>
+            <div className="p-2 sm:p-2.5 rounded-xl bg-white/5 border border-white/5">
+              <Feather className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-sky-400 mx-auto mb-0.5 sm:mb-1" />
+              <p className="text-[11px] sm:text-xs font-mono font-bold text-white">240g</p>
+              <p className="text-[9px] sm:text-[10px] text-slate-400">Siêu Êm Nhẹ</p>
             </div>
-            <div className="p-2.5 rounded-xl bg-white/5 border border-white/5">
-              <Sliders className="w-4 h-4 text-indigo-400 mx-auto mb-1" />
-              <p className="text-xs font-mono font-bold text-white">-45dB</p>
-              <p className="text-[10px] text-slate-400">Hybrid ANC</p>
+            <div className="p-2 sm:p-2.5 rounded-xl bg-white/5 border border-white/5">
+              <Sliders className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-indigo-400 mx-auto mb-0.5 sm:mb-1" />
+              <p className="text-[11px] sm:text-xs font-mono font-bold text-white">-45dB</p>
+              <p className="text-[9px] sm:text-[10px] text-slate-400">Hybrid ANC</p>
             </div>
           </div>
         </div>

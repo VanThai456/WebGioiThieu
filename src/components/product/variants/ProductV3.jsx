@@ -12,27 +12,24 @@ export default function ProductV3({ data, onSelectService }) {
   return (
     <div className="bg-[#FAF9F5] text-slate-900 transition-colors">
       {/* 1. Audiophile Acoustic Engineering Hero */}
-      <section className="pt-32 pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
-        <div className="max-w-4xl mx-auto mb-16">
-          <span className="inline-block px-3.5 py-1 rounded-full text-xs font-mono font-bold tracking-widest uppercase bg-indigo-100 text-indigo-900 border border-indigo-200 mb-6">
-            ACOUSTIC ENGINEERING • BỘ GIAO DIỆN 3
-          </span>
-          <h1 className="font-heading text-4xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 mb-6 tracking-tight leading-[1.12]">
+      <section className="pt-20 pb-10 sm:pt-28 sm:pb-16 md:pt-32 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto mb-6 sm:mb-12 md:mb-16">
+          <h1 className="font-heading text-2xl sm:text-5xl lg:text-7xl font-extrabold text-slate-900 mb-3 sm:mb-6 tracking-tight leading-[1.22] sm:leading-[1.12]">
             Kỹ Nghệ Tái Tạo Âm Thanh Không Gian Chuẩn Phòng Thu
           </h1>
-          <p className="text-base sm:text-xl text-slate-600 leading-relaxed mb-10 max-w-2xl mx-auto">
+          <p className="text-xs sm:text-xl text-slate-600 leading-relaxed mb-5 sm:mb-10 max-w-2xl mx-auto">
             Được tinh chỉnh bởi các kỹ sư âm học hàng đầu thế giới để truyền tải trọn vẹn từng hơi thở của ca sĩ và tiếng gảy dây đàn mộc mạc nhất.
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-4">
             <a
               href="#acoustic"
-              className="px-8 py-4 rounded-full font-bold text-sm text-white shadow-xl hover:scale-105 transition-transform bg-slate-900 hover:bg-indigo-600"
+              className="w-full sm:w-auto px-5 py-2.5 sm:px-8 sm:py-4 rounded-full font-bold text-xs sm:text-sm text-white shadow-xl hover:scale-105 transition-transform bg-slate-900 hover:bg-indigo-600"
             >
               Xem Thông Số Kỹ Thuật Chi Tiết
             </a>
             <a
               href="#contact"
-              className="px-8 py-4 rounded-full font-bold text-sm text-slate-800 bg-white border border-slate-300 hover:bg-slate-100 transition-transform shadow-sm"
+              className="w-full sm:w-auto px-5 py-2.5 sm:px-8 sm:py-4 rounded-full font-bold text-xs sm:text-sm text-slate-800 bg-white border border-slate-300 hover:bg-slate-100 transition-transform shadow-sm"
             >
               Đặt Mua Bản Audiophile
             </a>
@@ -40,23 +37,22 @@ export default function ProductV3({ data, onSelectService }) {
         </div>
 
         {/* Acoustic Driver Visual Feature Frame */}
-        <div className="max-w-5xl mx-auto rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-2xl p-6 sm:p-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-left">
+        <div className="max-w-5xl mx-auto rounded-2xl sm:rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-2xl p-4 sm:p-8 md:p-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 items-center text-left">
             <div>
-              <span className="text-xs font-mono font-bold uppercase text-indigo-600">BERYLLIUM DOME DRIVER</span>
-              <h3 className="font-heading text-2xl sm:text-3xl font-bold text-slate-900 mt-2 mb-4">
+              <h3 className="font-heading text-lg sm:text-3xl font-bold text-slate-900 mb-2 sm:mb-4">
                 Công Nghệ Màng Loa Bạc Nguyên Khối 40mm
               </h3>
-              <p className="text-sm text-slate-600 leading-relaxed mb-6">
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4 sm:mb-6">
                 Màng loa được tôi luyện ở nhiệt độ 1.200°C với lớp phủ Beryllium siêu cứng, loại bỏ hoàn toàn hiện tượng uốn cong màng loa khi chơi các bản nhạc giao hưởng dồn dập.
               </p>
-              <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700 flex items-center gap-3">
-                <Activity className="w-5 h-5 text-indigo-600 shrink-0" />
+              <div className="p-3 sm:p-4 rounded-xl bg-slate-50 border border-slate-200 text-[11px] sm:text-xs text-slate-700 flex items-center gap-2.5 sm:gap-3">
+                <Activity className="w-4 h-4 sm:w-5 sm:h-5 text-indigo-600 shrink-0" />
                 <span>Kiểm định và chứng nhận bởi Viện Tiêu Chuẩn Âm Thanh Quốc Tế (AES).</span>
               </div>
             </div>
 
-            <div className="h-72 sm:h-80 rounded-2xl overflow-hidden bg-slate-50 flex items-center justify-center">
+            <div className="h-44 sm:h-64 md:h-80 rounded-xl sm:rounded-2xl overflow-hidden bg-slate-50 flex items-center justify-center">
               <img
                 src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=800&q=80"
                 alt="Acoustic Driver"
@@ -68,19 +64,19 @@ export default function ProductV3({ data, onSelectService }) {
       </section>
 
       {/* 2. Frequency & Acoustic Benchmark Metrics */}
-      <section id="acoustic" className="py-20 bg-white border-y border-slate-200">
+      <section id="acoustic" className="py-10 sm:py-16 md:py-20 bg-white border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="font-heading text-3xl font-extrabold text-slate-900 mb-3">Chỉ Số Benchmark Đo Lường Âm Học</h2>
-            <p className="text-sm text-slate-500">Được đo lường trong phòng cách âm chuẩn tiêu chuẩn IEC 60268-7.</p>
+          <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-12 md:mb-16">
+            <h2 className="font-heading text-xl sm:text-3xl font-extrabold text-slate-900 mb-2 sm:mb-3">Chỉ Số Benchmark Đo Lường Âm Học</h2>
+            <p className="text-xs sm:text-sm text-slate-500">Được đo lường trong phòng cách âm chuẩn tiêu chuẩn IEC 60268-7.</p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
             {acousticSpecs.map((spec, idx) => (
-              <div key={idx} className="p-6 rounded-2xl bg-slate-50 border border-slate-200 text-center flex flex-col justify-between">
-                <span className="text-xs font-mono font-bold text-slate-500 uppercase mb-2">{spec.title}</span>
-                <span className="font-mono text-2xl sm:text-3xl font-black text-indigo-700 my-2">{spec.val}</span>
-                <span className="text-xs text-slate-500 mt-2">{spec.sub}</span>
+              <div key={idx} className="p-3.5 sm:p-6 rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-200 text-center flex flex-col justify-between">
+                <span className="text-[10px] sm:text-xs font-mono font-bold text-slate-500 uppercase mb-1 sm:mb-2">{spec.title}</span>
+                <span className="font-mono text-lg sm:text-2xl md:text-3xl font-black text-indigo-700 my-1 sm:my-2">{spec.val}</span>
+                <span className="text-[10px] sm:text-xs text-slate-500 mt-1 sm:mt-2">{spec.sub}</span>
               </div>
             ))}
           </div>

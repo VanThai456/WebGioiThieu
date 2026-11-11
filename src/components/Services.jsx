@@ -8,21 +8,9 @@ export default function Services({ data, onSelectService }) {
     <section id="services" className="py-24 transition-colors duration-300 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          {badge && (
-            <div
-              className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 shadow-sm"
-              style={{
-                backgroundColor: 'var(--color-primary-light)',
-                color: 'var(--color-primary)',
-              }}
-            >
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>{badge}</span>
-            </div>
-          )}
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
           <h2
-            className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-5"
+            className="font-heading text-xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-2.5 sm:mb-5"
             style={{ color: 'var(--color-text)' }}
           >
             {title}
@@ -36,7 +24,7 @@ export default function Services({ data, onSelectService }) {
         </div>
 
         {/* Dynamic Grid: 3 or 6 columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 lg:gap-8">
           {items.map((item) => (
             <div
               key={item.id}
@@ -47,7 +35,7 @@ export default function Services({ data, onSelectService }) {
               }}
             >
               {/* Card Image Container */}
-              <div className="relative h-52 sm:h-60 w-full overflow-hidden bg-gray-100 dark:bg-slate-800">
+              <div className="relative h-28 sm:h-52 lg:h-60 w-full overflow-hidden bg-gray-100 dark:bg-slate-800">
                 <img
                   src={item.image}
                   alt={item.title}

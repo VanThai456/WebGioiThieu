@@ -106,7 +106,7 @@ export default function Stats({ data }) {
     <section
       id="stats"
       ref={sectionRef}
-      className="py-20 relative overflow-hidden transition-colors duration-300"
+      className="py-10 sm:py-20 relative overflow-hidden transition-colors duration-300"
       style={{
         backgroundColor: 'var(--color-surface)',
       }}
@@ -121,29 +121,15 @@ export default function Stats({ data }) {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section title & badge */}
-        {(badge || title) && (
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            {badge && (
-              <div
-                className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-3 shadow-sm"
-                style={{
-                  backgroundColor: 'var(--color-primary-light)',
-                  color: 'var(--color-primary)',
-                }}
-              >
-                <TrendingUp className="w-3.5 h-3.5" />
-                <span>{badge}</span>
-              </div>
-            )}
-            {title && (
-              <h2
-                className="font-heading text-2xl sm:text-3xl font-extrabold tracking-tight"
-                style={{ color: 'var(--color-text)' }}
-              >
-                {title}
-              </h2>
-            )}
+        {/* Section title */}
+        {title && (
+          <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-12">
+            <h2
+              className="font-heading text-xl sm:text-3xl font-extrabold tracking-tight"
+              style={{ color: 'var(--color-text)' }}
+            >
+              {title}
+            </h2>
           </div>
         )}
 

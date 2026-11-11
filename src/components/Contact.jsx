@@ -65,27 +65,15 @@ export default function Contact({ data, selectedService }) {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          {badge && (
-            <div
-              className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 shadow-sm"
-              style={{
-                backgroundColor: 'var(--color-primary-light)',
-                color: 'var(--color-primary)',
-              }}
-            >
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>{badge}</span>
-            </div>
-          )}
+        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-16">
           <h2
-            className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-5"
+            className="font-heading text-xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-2.5 sm:mb-5"
             style={{ color: 'var(--color-text)' }}
           >
             {title}
           </h2>
           <p
-            className="text-base sm:text-lg leading-relaxed"
+            className="text-xs sm:text-lg leading-relaxed"
             style={{ color: 'var(--color-text-muted)' }}
           >
             {description}
@@ -93,24 +81,24 @@ export default function Contact({ data, selectedService }) {
         </div>
 
         {/* Form and Contact Info Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-10 items-start">
           {/* Left Column: Direct Info Card */}
           <div
-            className="lg:col-span-5 p-5 sm:p-8 lg:p-10 rounded-2xl sm:rounded-3xl shadow-lg border flex flex-col justify-between h-full"
+            className="lg:col-span-5 p-4 sm:p-8 lg:p-10 rounded-2xl sm:rounded-3xl shadow-lg border flex flex-col justify-between h-full"
             style={{
               backgroundColor: 'var(--color-surface)',
               borderColor: 'rgba(0,0,0,0.06)',
             }}
           >
             <div>
-              <h3 className="font-heading text-2xl font-bold mb-6" style={{ color: 'var(--color-text)' }}>
+              <h3 className="font-heading text-lg sm:text-2xl font-bold mb-3 sm:mb-6" style={{ color: 'var(--color-text)' }}>
                 Thông Tin Trực Tiếp
               </h3>
-              <p className="text-sm mb-8 leading-relaxed" style={{ color: 'var(--color-text-muted)' }}>
+              <p className="text-xs sm:text-sm mb-4 sm:mb-8 leading-relaxed" style={{ color: 'var(--color-text-muted)' }}>
                 Quý khách có thể ghé thăm trực tiếp hoặc liên hệ nhanh qua các kênh chăm sóc khách hàng 24/7 dưới đây:
               </p>
 
-              <div className="space-y-6">
+              <div className="space-y-3 sm:space-y-6">
                 {info.address && (
                   <div className="flex items-start gap-4">
                     <div
